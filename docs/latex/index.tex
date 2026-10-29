@@ -1,0 +1,103 @@
+\chapter{GXTK7 }
+\hypertarget{index}{}\label{index}\index{GXTK7@{GXTK7}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+
+
+\label{index_readme-top}%
+\Hypertarget{index_readme-top}%
+      
+
+\href{https://github.com/GXDE-OS/GXTK7/graphs/contributors}{\texttt{}} \href{https://github.com/GXDE-OS/GXTK7/network/members}{\texttt{}} \href{https://github.com/GXDE-OS/GXTK7/stargazers}{\texttt{}} \href{https://github.com/GXDE-OS/GXTK7/issues}{\texttt{}} \href{https://github.com/GXDE-OS/GXTK7/blob/main/LICENSE}{\texttt{}}
+
+~\newline
+     
+
+\doxysubsubsection*{GXTK 7}
+
+
+
+ 
+
+ GXDE\textquotesingle{}s Qt Quick UI plugin \& component library. ~\newline
+ \href{./docs/}{\texttt{{\bfseries{Explore the docs »}}}} ~\newline
+ ~\newline
+ \href{https://github.com/GXDE-OS/GXTK7/actions}{\texttt{View CI Status}} \textperiodcentered{} \href{https://github.com/GXDE-OS/GXTK7/issues/new}{\texttt{Report Bug}} \textperiodcentered{} \href{https://github.com/GXDE-OS/GXTK7/issues/new}{\texttt{Request Feature}} 
+
+ \hypertarget{index_autotoc_md0}{}\doxysubsection{\texorpdfstring{About The Project}{About The Project}}\label{index_autotoc_md0}
+ 
+\begin{DoxyInlineImage}%
+\includegraphics[height=\baselineskip,keepaspectratio=true]{screenshot.png}%Screenshot%
+\end{DoxyInlineImage}
+   
+
+GXTK 7 is GXDE-\/\+OS\textquotesingle{}s Qt\+Quick UI library \& style plugin that mimics Deepin\textquotesingle{}s DTK2\+Widget library. It aims to bring the apperance of DTK2\+Widget back to the modern Qt6 Quick applications without need of DTK2\+Widget-\/\+Qt6 (I also made that library but I really want to retire that) library or any Qt private libraries.
+
+Currently, GXTK7 is still in early development stage.\hypertarget{index_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Built With}{Built With}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Qt6 Core
+\item Qt6 Gui
+\item Qt6 Qml
+\item Qt6 Quick
+\item Qt6 Quick\+Controls2
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Getting Started}{Getting Started}}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Prerequisites}{Prerequisites}}\label{index_autotoc_md3}
+You need a C++ compiler supporting C++17 and the Qt6 development packages installed on your system.
+\begin{DoxyItemize}
+\item Qt6 (Core, Gui, Qml, Quick, Quick\+Controls2)
+\item CMake 3.\+20 or higher
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Installation}{Installation}}\label{index_autotoc_md4}
+\hypertarget{index_autotoc_md5}{}\doxysubsubsubsection{\texorpdfstring{Build Manually}{Build Manually}}\label{index_autotoc_md5}
+First, create a build directory and build the project: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ mkdir\ build}
+\DoxyCodeLine{\$\ cd\ build}
+\DoxyCodeLine{\$\ cmake\ ..}
+\DoxyCodeLine{\$\ make}
+
+\end{DoxyCode}
+
+
+Then, you may run the example: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./examples/gallery/gxde\_gallery}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md6}{}\doxysubsubsubsection{\texorpdfstring{Build a Debian Package}{Build a Debian Package}}\label{index_autotoc_md6}
+Install the build dependencies, then build the binary package from the source root: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ sudo\ apt\ build-\/dep\ .}
+\DoxyCodeLine{\$\ dpkg-\/buildpackage\ -\/us\ -\/uc\ -\/b}
+
+\end{DoxyCode}
+
+
+This produces {\ttfamily qml6-\/module-\/qtquick-\/controls-\/gxde}, which installs the {\ttfamily Qt\+Quick.\+Controls.\+Gxde} module into the system Qt QML directory.\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{index_autotoc_md7}
+Select the style by its full module name, either in C++: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{QQuickStyle::setStyle(\textcolor{stringliteral}{"{}QtQuick.Controls.Gxde"{}});}
+
+\end{DoxyCode}
+ or through the environment: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ QT\_QUICK\_CONTROLS\_STYLE=QtQuick.Controls.Gxde\ ./your\_app}
+
+\end{DoxyCode}
+
+
+The {\ttfamily Gxde\+Theme} singleton ({\ttfamily import Qt\+Quick.\+Controls.\+Gxde}) switches between the light and dark schemes through its {\ttfamily is\+Dark} property.
+
+For more, please refer to the \href{./examples/gallery/}{\texttt{widget gallery example}} and the \href{./docs/}{\texttt{documentation}}.\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Roadmap}{Roadmap}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item[\DoxyChecked] To provide basic Qt\+Quick style.
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md9}
+\hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Top contributors:}{Top contributors:}}\label{index_autotoc_md10}
+\href{https://github.com/GXDE-OS/GXTK7/graphs/contributors}{\texttt{ }}\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{License}{License}}\label{index_autotoc_md11}
+GXTK7 is distributed under GNU GENERAL PUBLIC LICENSE Version 3. You may find a copy of the license \href{./LICENSE}{\texttt{here}}.\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Acknowledgments}{Acknowledgments}}\label{index_autotoc_md12}
+
+\begin{DoxyItemize}
+\item {\bfseries{DTK2\+Widget-\/\+Qt6}}: \href{https://github.com/GXDE-OS/dtk2widget-qt6}{\texttt{https:\+/\+/\+github.\+com/\+\+GXDE-\/\+OS/\+dtk2widget-\/qt6}}
+\item {\bfseries{BEST-\/\+README-\/\+Template}}: \href{https://github.com/othneildrew/Best-README-Template}{\texttt{https:\+/\+/\+github.\+com/\+othneildrew/\+\+Best-\/\+README-\/\+Template}} 
+\end{DoxyItemize}

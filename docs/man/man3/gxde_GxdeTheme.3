@@ -1,0 +1,142 @@
+.TH "gxde::GxdeTheme" 3 "Version 0.1.0" "GXTK7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gxde::GxdeTheme \- Holds the theme state shared by the Gxde QML style and C++\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <gxde_theme\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBthemeChanged\fP ()"
+.br
+.RI "Emitted when the theme mode changes\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGxdeTheme\fP (QObject *parent)"
+.br
+.RI "Constructs the \fBGxdeTheme\fP instance\&. "
+.ti -1c
+.RI "\fB~GxdeTheme\fP () override=default"
+.br
+.RI "Destructor for \fBGxdeTheme\fP\&. "
+.ti -1c
+.RI "bool \fBIsDark\fP () const"
+.br
+.RI "Gets whether dark theme mode is enabled\&. "
+.ti -1c
+.RI "void \fBSetDark\fP (bool dark)"
+.br
+.RI "Sets the theme mode\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBGxdeTheme\fP * \fBInstance\fP ()"
+.br
+.RI "Returns the global \fBGxdeTheme\fP instance\&. "
+.ti -1c
+.RI "static \fBGxdeTheme\fP * \fBcreate\fP (QQmlEngine *engine, QJSEngine *script_engine)"
+.br
+.RI "QML singleton provider callback\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QML_SINGLETONbool \fBisDark\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds the theme state shared by the Gxde QML style and C++\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "gxde::GxdeTheme::GxdeTheme (QObject * parent)\fR [explicit]\fP"
+
+.PP
+Constructs the \fBGxdeTheme\fP instance\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP The optional QObject parent, if any\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGxdeTheme\fP * gxde::GxdeTheme::create (QQmlEngine * engine, QJSEngine * script_engine)\fR [static]\fP"
+
+.PP
+QML singleton provider callback\&. QML_SINGLETON requires this exact name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIengine\fP QML engine reference\&. 
+.br
+\fIscript_engine\fP JS engine reference\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Shared singleton instance, owned by C++\&. 
+.RE
+.PP
+
+.SS "\fBGxdeTheme\fP * gxde::GxdeTheme::Instance ()\fR [static]\fP"
+
+.PP
+Returns the global \fBGxdeTheme\fP instance\&. 
+.PP
+\fBNote\fP
+.RS 4
+This is a singleton instance\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Singleton \fBGxdeTheme\fP pointer\&. 
+.RE
+.PP
+
+.SS "bool gxde::GxdeTheme::IsDark () const\fR [nodiscard]\fP"
+
+.PP
+Gets whether dark theme mode is enabled\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if dark mode is active\&. 
+.RE
+.PP
+
+.SS "void gxde::GxdeTheme::SetDark (bool dark)"
+
+.PP
+Sets the theme mode\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdark\fP Boolean indicating dark mode on/off\&. 
+.RE
+.PP
+
+.SS "void gxde::GxdeTheme::themeChanged ()\fR [signal]\fP"
+
+.PP
+Emitted when the theme mode changes\&. QML only binds on<Signal> handlers to signals starting in lowercase\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GXTK7 from the source code\&.

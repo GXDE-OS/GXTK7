@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;!--<sp/>Improved<sp/>compatibility<sp/>of<sp/>back<sp/>to<sp/>top<sp/>link:<sp/>See:<sp/>https://github.com/othneildrew/Best-README-Template/pull/73<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&quot;readme-top&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>Thanks<sp/>for<sp/>checking<sp/>out<sp/>the<sp/>Best-README-Template.<sp/>If<sp/>you<sp/>have<sp/>a<sp/>suggestion</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>that<sp/>would<sp/>make<sp/>this<sp/>better,<sp/>please<sp/>fork<sp/>the<sp/>repo<sp/>and<sp/>create<sp/>a<sp/>pull<sp/>request</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>or<sp/>simply<sp/>open<sp/>an<sp/>issue<sp/>with<sp/>the<sp/>tag<sp/>&quot;enhancement&quot;.</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>Don&apos;t<sp/>forget<sp/>to<sp/>give<sp/>the<sp/>project<sp/>a<sp/>star!</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>Thanks<sp/>again!<sp/>Now<sp/>go<sp/>create<sp/>something<sp/>AMAZING!<sp/>:D</highlight></codeline>
+<codeline><highlight class="normal">--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PROJECT<sp/>SHIELDS<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>I&apos;m<sp/>using<sp/>markdown<sp/>&quot;reference<sp/>style&quot;<sp/>links<sp/>for<sp/>readability.</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>Reference<sp/>links<sp/>are<sp/>enclosed<sp/>in<sp/>brackets<sp/>[<sp/>]<sp/>instead<sp/>of<sp/>parentheses<sp/>(<sp/>).</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>See<sp/>the<sp/>bottom<sp/>of<sp/>this<sp/>document<sp/>for<sp/>the<sp/>declaration<sp/>of<sp/>the<sp/>reference<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>for<sp/>contributors-url,<sp/>forks-url,<sp/>etc.<sp/>This<sp/>is<sp/>an<sp/>optional,<sp/>concise<sp/>syntax<sp/>you<sp/>may<sp/>use.</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>https://www.markdownguide.org/basic-syntax/#reference-style-links</highlight></codeline>
+<codeline><highlight class="normal">--&gt;</highlight></codeline>
+<codeline><highlight class="normal">[![Contributors][contributors-shield]][contributors-url]</highlight></codeline>
+<codeline><highlight class="normal">[![Forks][forks-shield]][forks-url]</highlight></codeline>
+<codeline><highlight class="normal">[![Stargazers][stars-shield]][stars-url]</highlight></codeline>
+<codeline><highlight class="normal">[![Issues][issues-shield]][issues-url]</highlight></codeline>
+<codeline><highlight class="normal">[![project_license][license-shield]][license-url]</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PROJECT<sp/>LOGO<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;!--</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/GXDE-OS/GXTK7&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;images/logo.png&quot;<sp/>alt=&quot;Logo&quot;<sp/>width=&quot;80&quot;<sp/>height=&quot;80&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h3<sp/>align=&quot;center&quot;&gt;GXTK<sp/>7&lt;/h3&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>GXDE&apos;s<sp/>Qt<sp/>Quick<sp/>UI<sp/>plugin<sp/>&amp;<sp/>component<sp/>library.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;./docs/&quot;&gt;&lt;strong&gt;Explore<sp/>the<sp/>docs<sp/>»&lt;/strong&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/GXDE-OS/GXTK7/actions&quot;&gt;View<sp/>CI<sp/>Status&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;middot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/GXDE-OS/GXTK7/issues/new&quot;&gt;Report<sp/>Bug&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;middot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/GXDE-OS/GXTK7/issues/new&quot;&gt;Request<sp/>Feature&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ABOUT<sp/>THE<sp/>PROJECT<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>The<sp/>Project</highlight></codeline>
+<codeline><highlight class="normal">![Screenshot](./docs/imgs/screenshot.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GXTK<sp/>7<sp/>is<sp/>GXDE-OS&apos;s<sp/>QtQuick<sp/>UI<sp/>library<sp/>&amp;<sp/>style<sp/>plugin<sp/>that<sp/>mimics<sp/>Deepin&apos;s<sp/>DTK2Widget<sp/>library.<sp/>It<sp/>aims<sp/>to<sp/>bring<sp/>the<sp/>apperance<sp/>of<sp/>DTK2Widget<sp/>back<sp/>to<sp/>the<sp/>modern<sp/>Qt6<sp/>Quick<sp/>applications<sp/>without<sp/>need<sp/>of<sp/>DTK2Widget-Qt6<sp/>(I<sp/>also<sp/>made<sp/>that<sp/>library<sp/>but<sp/>I<sp/>really<sp/>want<sp/>to<sp/>retire<sp/>that)<sp/>library<sp/>or<sp/>any<sp/>Qt<sp/>private<sp/>libraries.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Currently,<sp/>GXTK7<sp/>is<sp/>still<sp/>in<sp/>early<sp/>development<sp/>stage.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Built<sp/>With</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Qt6<sp/>Core</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Qt6<sp/>Gui</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Qt6<sp/>Qml</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Qt6<sp/>Quick</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Qt6<sp/>QuickControls2</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>GETTING<sp/>STARTED<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Prerequisites</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>need<sp/>a<sp/>C++<sp/>compiler<sp/>supporting<sp/>C++17<sp/>and<sp/>the<sp/>Qt6<sp/>development<sp/>packages<sp/>installed<sp/>on<sp/>your<sp/>system.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Qt6<sp/>(Core,<sp/>Gui,<sp/>Qml,<sp/>Quick,<sp/>QuickControls2)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>CMake<sp/>3.20<sp/>or<sp/>higher</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installation</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Build<sp/>Manually</highlight></codeline>
+<codeline><highlight class="normal">First,<sp/>create<sp/>a<sp/>build<sp/>directory<sp/>and<sp/>build<sp/>the<sp/>project:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Then,<sp/>you<sp/>may<sp/>run<sp/>the<sp/>example:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">./examples/gallery/gxde_gallery</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Build<sp/>a<sp/>Debian<sp/>Package</highlight></codeline>
+<codeline><highlight class="normal">Install<sp/>the<sp/>build<sp/>dependencies,<sp/>then<sp/>build<sp/>the<sp/>binary<sp/>package<sp/>from<sp/>the<sp/>source<sp/>root:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>sudo<sp/>apt<sp/>build-dep<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>dpkg-buildpackage<sp/>-us<sp/>-uc<sp/>-b</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>produces<sp/>`qml6-module-qtquick-controls-gxde`,<sp/>which<sp/>installs<sp/>the<sp/>`QtQuick.Controls.Gxde`<sp/>module<sp/>into<sp/>the<sp/>system<sp/>Qt<sp/>QML<sp/>directory.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>USAGE<sp/>EXAMPLES<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">Select<sp/>the<sp/>style<sp/>by<sp/>its<sp/>full<sp/>module<sp/>name,<sp/>either<sp/>in<sp/>C++:</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">QQuickStyle::setStyle(&quot;QtQuick.Controls.Gxde&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">or<sp/>through<sp/>the<sp/>environment:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde<sp/>./your_app</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`GxdeTheme`<sp/>singleton<sp/>(`import<sp/>QtQuick.Controls.Gxde`)<sp/>switches<sp/>between<sp/>the<sp/>light<sp/>and<sp/>dark<sp/>schemes<sp/>through<sp/>its<sp/>`isDark`<sp/>property.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>more,<sp/>please<sp/>refer<sp/>to<sp/>the<sp/>[widget<sp/>gallery<sp/>example](./examples/gallery/)<sp/>and<sp/>the<sp/>[documentation](./docs/).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ROADMAP<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Roadmap</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[X]<sp/>To<sp/>provide<sp/>basic<sp/>QtQuick<sp/>style.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>CONTRIBUTING<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contributing</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Top<sp/>contributors:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>href=&quot;https://github.com/GXDE-OS/GXTK7/graphs/contributors&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;img<sp/>src=&quot;https://contrib.rocks/image?repo=GXDE-OS/GXTK7&quot;<sp/>alt=&quot;contrib.rocks<sp/>image&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>LICENSE<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline><highlight class="normal">GXTK7<sp/>is<sp/>distributed<sp/>under<sp/>GNU<sp/>GENERAL<sp/>PUBLIC<sp/>LICENSE<sp/>Version<sp/>3.<sp/>You<sp/>may<sp/>find<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>license<sp/>[here](./LICENSE).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ACKNOWLEDGMENTS<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Acknowledgments</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**DTK2Widget-Qt6**:<sp/>https://github.com/GXDE-OS/dtk2widget-qt6</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**BEST-README-Template**:<sp/>https://github.com/othneildrew/Best-README-Template</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>MARKDOWN<sp/>LINKS<sp/>&amp;<sp/>IMAGES<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>https://www.markdownguide.org/basic-syntax/#reference-style-links<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">[contributors-shield]:<sp/>https://img.shields.io/github/contributors/GXDE-OS/GXTK7.svg?style=for-the-badge</highlight></codeline>
+<codeline><highlight class="normal">[contributors-url]:<sp/>https://github.com/GXDE-OS/GXTK7/graphs/contributors</highlight></codeline>
+<codeline><highlight class="normal">[forks-shield]:<sp/>https://img.shields.io/github/forks/GXDE-OS/GXTK7.svg?style=for-the-badge</highlight></codeline>
+<codeline><highlight class="normal">[forks-url]:<sp/>https://github.com/GXDE-OS/GXTK7/network/members</highlight></codeline>
+<codeline><highlight class="normal">[stars-shield]:<sp/>https://img.shields.io/github/stars/GXDE-OS/GXTK7.svg?style=for-the-badge</highlight></codeline>
+<codeline><highlight class="normal">[stars-url]:<sp/>https://github.com/GXDE-OS/GXTK7/stargazers</highlight></codeline>
+<codeline><highlight class="normal">[issues-shield]:<sp/>https://img.shields.io/github/issues/GXDE-OS/GXTK7.svg?style=for-the-badge</highlight></codeline>
+<codeline><highlight class="normal">[issues-url]:<sp/>https://github.com/GXDE-OS/GXTK7/issues</highlight></codeline>
+<codeline><highlight class="normal">[license-shield]:<sp/>https://img.shields.io/github/license/GXDE-OS/GXTK7.svg?style=for-the-badge</highlight></codeline>
+<codeline><highlight class="normal">[license-url]:<sp/>https://github.com/GXDE-OS/GXTK7/blob/main/LICENSE</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

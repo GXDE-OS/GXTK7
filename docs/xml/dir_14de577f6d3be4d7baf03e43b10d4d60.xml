@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_14de577f6d3be4d7baf03e43b10d4d60" kind="dir">
+    <compoundname>src/style/gxde_theme</compoundname>
+    <innerfile refid="gxde__theme_8cc">gxde_theme.cc</innerfile>
+    <innerfile refid="gxde__theme_8h">gxde_theme.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/style/gxde_theme/"/>
+  </compounddef>
+</doxygen>

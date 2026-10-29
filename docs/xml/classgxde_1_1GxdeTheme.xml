@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="classgxde_1_1GxdeTheme" kind="class" language="C++" prot="public">
+    <compoundname>gxde::GxdeTheme</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="gxde__theme_8h" local="no">gxde_theme.h</includes>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="classgxde_1_1GxdeTheme_1a38fd58e0e4d32c8c77150b1708e2c7fc" prot="public" static="no" readable="yes" writable="yes" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>QML_SINGLETONbool</type>
+        <definition>QML_SINGLETONbool gxde::GxdeTheme::isDark</definition>
+        <argsstring></argsstring>
+        <name>isDark</name>
+        <qualifiedname>gxde::GxdeTheme::isDark</qualifiedname>
+        <read>IsDark</read>
+        <write>SetDark</write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="37" column="3" bodyfile="src/style/gxde_theme/gxde_theme.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgxde_1_1GxdeTheme_1abd4ad20bb64ba34f08b4d05a939bee62" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gxde::GxdeTheme::is_dark_</definition>
+        <argsstring></argsstring>
+        <name>is_dark_</name>
+        <qualifiedname>gxde::GxdeTheme::is_dark_</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="91" column="8" bodyfile="src/style/gxde_theme/gxde_theme.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgxde_1_1GxdeTheme_1a8e08212e6216ebe1ec9da962c28b8f39" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gxde::GxdeTheme::GxdeTheme</definition>
+        <argsstring>(QObject *parent)</argsstring>
+        <name>GxdeTheme</name>
+        <qualifiedname>gxde::GxdeTheme::GxdeTheme</qualifiedname>
+        <param>
+          <type>QObject *</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Constructs the <ref refid="classgxde_1_1GxdeTheme" kindref="compound">GxdeTheme</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional QObject parent, if any. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="44" column="12" bodyfile="src/style/gxde_theme/gxde_theme.cc" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1GxdeTheme_1a0c7b8db99171980bd6b84824cb8ba175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gxde::GxdeTheme::~GxdeTheme</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~GxdeTheme</name>
+        <qualifiedname>gxde::GxdeTheme::~GxdeTheme</qualifiedname>
+        <briefdescription>
+<para>Destructor for <ref refid="classgxde_1_1GxdeTheme" kindref="compound">GxdeTheme</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="49" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1GxdeTheme_1ab38952966c7f541bf4d40ff2e212a3b6" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gxde::GxdeTheme::IsDark</definition>
+        <argsstring>() const</argsstring>
+        <name>IsDark</name>
+        <qualifiedname>gxde::GxdeTheme::IsDark</qualifiedname>
+        <briefdescription>
+<para>Gets whether dark theme mode is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if dark mode is active. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="74" column="9" bodyfile="src/style/gxde_theme/gxde_theme.cc" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1GxdeTheme_1a1001bf3a95e9fd71a2c8f6f937265c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::GxdeTheme::SetDark</definition>
+        <argsstring>(bool dark)</argsstring>
+        <name>SetDark</name>
+        <qualifiedname>gxde::GxdeTheme::SetDark</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>dark</declname>
+        </param>
+        <briefdescription>
+<para>Sets the theme mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dark</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean indicating dark mode on/off. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="80" column="8" bodyfile="src/style/gxde_theme/gxde_theme.cc" bodystart="40" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgxde_1_1GxdeTheme_1a60d952b0f7b6f3f5be0b4ac72f78c9b2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgxde_1_1GxdeTheme_1a8e08212e6216ebe1ec9da962c28b8f39" kindref="member">GxdeTheme</ref> *</type>
+        <definition>GxdeTheme * gxde::GxdeTheme::Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <qualifiedname>gxde::GxdeTheme::Instance</qualifiedname>
+        <briefdescription>
+<para>Returns the global <ref refid="classgxde_1_1GxdeTheme" kindref="compound">GxdeTheme</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is a singleton instance. </para>
+</simplesect>
+<simplesect kind="return"><para>Singleton <ref refid="classgxde_1_1GxdeTheme" kindref="compound">GxdeTheme</ref> pointer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="57" column="20" bodyfile="src/style/gxde_theme/gxde_theme.cc" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1GxdeTheme_1abc5ef74a8d2dd1eddc8fa985e68d4935" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgxde_1_1GxdeTheme_1a8e08212e6216ebe1ec9da962c28b8f39" kindref="member">GxdeTheme</ref> *</type>
+        <definition>GxdeTheme * gxde::GxdeTheme::create</definition>
+        <argsstring>(QQmlEngine *engine, QJSEngine *script_engine)</argsstring>
+        <name>create</name>
+        <qualifiedname>gxde::GxdeTheme::create</qualifiedname>
+        <param>
+          <type>QQmlEngine *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type>QJSEngine *</type>
+          <declname>script_engine</declname>
+        </param>
+        <briefdescription>
+<para>QML singleton provider callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>QML_SINGLETON requires this exact name. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>engine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QML engine reference. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>script_engine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JS engine reference. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Shared singleton instance, owned by C++. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="67" column="20" bodyfile="src/style/gxde_theme/gxde_theme.cc" bodystart="29" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="classgxde_1_1GxdeTheme_1a6f6b86e474f7f389a9c9231507760cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::GxdeTheme::themeChanged</definition>
+        <argsstring>()</argsstring>
+        <name>themeChanged</name>
+        <qualifiedname>gxde::GxdeTheme::themeChanged</qualifiedname>
+        <briefdescription>
+<para>Emitted when the theme mode changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>QML only binds on&lt;Signal&gt; handlers to signals starting in lowercase. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/gxde_theme/gxde_theme.h" line="88" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the theme state shared by the Gxde QML style and C++. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>gxde::GxdeTheme</label>
+        <link refid="classgxde_1_1GxdeTheme"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="1">
+        <label>gxde::GxdeTheme</label>
+        <link refid="classgxde_1_1GxdeTheme"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/style/gxde_theme/gxde_theme.h" line="32" column="1" bodyfile="src/style/gxde_theme/gxde_theme.h" bodystart="32" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classgxde_1_1GxdeTheme_1abc5ef74a8d2dd1eddc8fa985e68d4935" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>create</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1a8e08212e6216ebe1ec9da962c28b8f39" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>GxdeTheme</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1a60d952b0f7b6f3f5be0b4ac72f78c9b2" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>Instance</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1abd4ad20bb64ba34f08b4d05a939bee62" prot="private" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>is_dark_</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1ab38952966c7f541bf4d40ff2e212a3b6" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>IsDark</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1a38fd58e0e4d32c8c77150b1708e2c7fc" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>isDark</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1a1001bf3a95e9fd71a2c8f6f937265c29" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>SetDark</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1a6f6b86e474f7f389a9c9231507760cdd" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>themeChanged</name></member>
+      <member refid="classgxde_1_1GxdeTheme_1a0c7b8db99171980bd6b84824cb8ba175" prot="public" virt="non-virtual"><scope>gxde::GxdeTheme</scope><name>~GxdeTheme</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

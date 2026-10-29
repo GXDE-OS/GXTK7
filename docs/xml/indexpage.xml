@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>GXTK7</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/></para>
+<para><anchor id="index_1readme-top"/>      </para>
+<para><ulink url="https://github.com/GXDE-OS/GXTK7/graphs/contributors"><image type="html" name="https://img.shields.io/github/contributors/GXDE-OS/GXTK7.svg?style=for-the-badge" alt="Contributors" inline="yes"></image>
+</ulink> <ulink url="https://github.com/GXDE-OS/GXTK7/network/members"><image type="html" name="https://img.shields.io/github/forks/GXDE-OS/GXTK7.svg?style=for-the-badge" alt="Forks" inline="yes"></image>
+</ulink> <ulink url="https://github.com/GXDE-OS/GXTK7/stargazers"><image type="html" name="https://img.shields.io/github/stars/GXDE-OS/GXTK7.svg?style=for-the-badge" alt="Stargazers" inline="yes"></image>
+</ulink> <ulink url="https://github.com/GXDE-OS/GXTK7/issues"><image type="html" name="https://img.shields.io/github/issues/GXDE-OS/GXTK7.svg?style=for-the-badge" alt="Issues" inline="yes"></image>
+</ulink> <ulink url="https://github.com/GXDE-OS/GXTK7/blob/main/LICENSE"><image type="html" name="https://img.shields.io/github/license/GXDE-OS/GXTK7.svg?style=for-the-badge" alt="project_license" inline="yes"></image>
+</ulink></para>
+<para><linebreak/>
+     </para>
+<para><heading level="3">GXTK 7</heading>
+</para>
+<para></para>
+<para> </para>
+<para> GXDE&apos;s Qt Quick UI plugin &amp; component library. <linebreak/>
+ <ulink url="./docs/"><bold>Explore the docs »</bold></ulink> <linebreak/>
+ <linebreak/>
+ <ulink url="https://github.com/GXDE-OS/GXTK7/actions">View CI Status</ulink> <middot/> <ulink url="https://github.com/GXDE-OS/GXTK7/issues/new">Report Bug</ulink> <middot/> <ulink url="https://github.com/GXDE-OS/GXTK7/issues/new">Request Feature</ulink> </para>
+<para> </para>
+<sect1 id="index_1autotoc_md0_1s1"><sect2 id="index_1autotoc_md0">
+<title>About The Project</title><para><image type="html" name="screenshot.png" inline="yes">Screenshot</image>
+ <image type="latex" name="screenshot.png" inline="yes">Screenshot</image>
+ <image type="rtf" name="screenshot.png" inline="yes">Screenshot</image>
+ <image type="docbook" name="screenshot.png" inline="yes">Screenshot</image>
+ <image type="xml" name="screenshot.png" inline="yes">Screenshot</image>
+</para>
+<para>GXTK 7 is GXDE-OS&apos;s QtQuick UI library &amp; style plugin that mimics Deepin&apos;s DTK2Widget library. It aims to bring the apperance of DTK2Widget back to the modern Qt6 Quick applications without need of DTK2Widget-Qt6 (I also made that library but I really want to retire that) library or any Qt private libraries.</para>
+<para>Currently, GXTK7 is still in early development stage.</para>
+<sect3 id="index_1autotoc_md1">
+<title>Built With</title><para><itemizedlist>
+<listitem><para>Qt6 Core</para>
+</listitem><listitem><para>Qt6 Gui</para>
+</listitem><listitem><para>Qt6 Qml</para>
+</listitem><listitem><para>Qt6 Quick</para>
+</listitem><listitem><para>Qt6 QuickControls2</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md2_1s1"><sect2 id="index_1autotoc_md2">
+<title>Getting Started</title><sect3 id="index_1autotoc_md3">
+<title>Prerequisites</title><para>You need a C++ compiler supporting C++17 and the Qt6 development packages installed on your system.<itemizedlist>
+<listitem><para>Qt6 (Core, Gui, Qml, Quick, QuickControls2)</para>
+</listitem><listitem><para>CMake 3.20 or higher</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md4">
+<title>Installation</title><sect4 id="index_1autotoc_md5">
+<title>Build Manually</title><para>First, create a build directory and build the project: <programlisting filename=".sh"><codeline><highlight class="normal">$<sp/>mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>make</highlight></codeline>
+</programlisting></para>
+<para>Then, you may run the example: <programlisting filename=".sh"><codeline><highlight class="normal">./examples/gallery/gxde_gallery</highlight></codeline>
+</programlisting></para>
+</sect4>
+<sect4 id="index_1autotoc_md6">
+<title>Build a Debian Package</title><para>Install the build dependencies, then build the binary package from the source root: <programlisting filename=".sh"><codeline><highlight class="normal">$<sp/>sudo<sp/>apt<sp/>build-dep<sp/>.</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>dpkg-buildpackage<sp/>-us<sp/>-uc<sp/>-b</highlight></codeline>
+</programlisting></para>
+<para>This produces <computeroutput>qml6-module-qtquick-controls-gxde</computeroutput>, which installs the <computeroutput>QtQuick.Controls.Gxde</computeroutput> module into the system Qt QML directory.</para>
+</sect4>
+</sect3>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md7_1s1"><sect2 id="index_1autotoc_md7">
+<title>Usage</title><para>Select the style by its full module name, either in C++: <programlisting filename=".cpp"><codeline><highlight class="normal">QQuickStyle::setStyle(</highlight><highlight class="stringliteral">&quot;QtQuick.Controls.Gxde&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> or through the environment: <programlisting filename=".sh"><codeline><highlight class="normal">$<sp/>QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde<sp/>./your_app</highlight></codeline>
+</programlisting></para>
+<para>The <computeroutput>GxdeTheme</computeroutput> singleton (<computeroutput>import QtQuick.Controls.Gxde</computeroutput>) switches between the light and dark schemes through its <computeroutput>isDark</computeroutput> property.</para>
+<para>For more, please refer to the <ulink url="./examples/gallery/">widget gallery example</ulink> and the <ulink url="./docs/">documentation</ulink>.</para>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md8_1s1"><sect2 id="index_1autotoc_md8">
+<title>Roadmap</title><para><itemizedlist>
+<listitem override="checked"><para>To provide basic QtQuick style.</para>
+</listitem></itemizedlist>
+</para>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md9_1s1"><sect2 id="index_1autotoc_md9">
+<title>Contributing</title><sect3 id="index_1autotoc_md10">
+<title>Top contributors:</title><para><ulink url="https://github.com/GXDE-OS/GXTK7/graphs/contributors"><image type="html" name="https://contrib.rocks/image?repo=GXDE-OS/GXTK7" alt="contrib.rocks image" inline="yes"></image>
+ </ulink></para>
+</sect3>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md11_1s1"><sect2 id="index_1autotoc_md11">
+<title>License</title><para>GXTK7 is distributed under GNU GENERAL PUBLIC LICENSE Version 3. You may find a copy of the license <ulink url="./LICENSE">here</ulink>.</para>
+</sect2></sect1>
+<sect1 id="index_1autotoc_md12_1s1"><sect2 id="index_1autotoc_md12">
+<title>Acknowledgments</title><para><itemizedlist>
+<listitem><para><bold>DTK2Widget-Qt6</bold>: <ulink url="https://github.com/GXDE-OS/dtk2widget-qt6">https://github.com/GXDE-OS/dtk2widget-qt6</ulink></para>
+</listitem><listitem><para><bold>BEST-README-Template</bold>: <ulink url="https://github.com/othneildrew/Best-README-Template">https://github.com/othneildrew/Best-README-Template</ulink> </para>
+</listitem></itemizedlist>
+</para>
+</sect2></sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="classgxde_1_1GxdeTheme" kind="class"><name>gxde::GxdeTheme</name>
+    <member refid="classgxde_1_1GxdeTheme_1a38fd58e0e4d32c8c77150b1708e2c7fc" kind="property"><name>isDark</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1abd4ad20bb64ba34f08b4d05a939bee62" kind="variable"><name>is_dark_</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1a8e08212e6216ebe1ec9da962c28b8f39" kind="function"><name>GxdeTheme</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1a0c7b8db99171980bd6b84824cb8ba175" kind="function"><name>~GxdeTheme</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1ab38952966c7f541bf4d40ff2e212a3b6" kind="function"><name>IsDark</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1a1001bf3a95e9fd71a2c8f6f937265c29" kind="function"><name>SetDark</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1a60d952b0f7b6f3f5be0b4ac72f78c9b2" kind="function"><name>Instance</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1abc5ef74a8d2dd1eddc8fa985e68d4935" kind="function"><name>create</name></member>
+    <member refid="classgxde_1_1GxdeTheme_1a6f6b86e474f7f389a9c9231507760cdd" kind="signal"><name>themeChanged</name></member>
+  </compound>
+  <compound refid="namespacegxde" kind="namespace"><name>gxde</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="gxde__theme_8cc" kind="file"><name>gxde_theme.cc</name>
+  </compound>
+  <compound refid="gxde__theme_8h" kind="file"><name>gxde_theme.h</name>
+  </compound>
+  <compound refid="dir_14de577f6d3be4d7baf03e43b10d4d60" kind="dir"><name>src/style/gxde_theme</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_ade1fb6582c957ace0eb431debfd084f" kind="dir"><name>src/style</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>
