@@ -1,3 +1,9 @@
+gxtk7 (0.1.1-1) UNRELEASED; urgency=medium
+
+  * Added avatar image render and an image button for control center to use.
+
+ -- CharOfString <root@charofstring.cc>  Thu, 29 Oct 2026 08:52:24 -0500
+
 gxtk7 (0.1.0) UNRELEASED; urgency=medium
 
   * Initial release.
