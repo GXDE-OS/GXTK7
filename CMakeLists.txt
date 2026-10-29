@@ -21,6 +21,8 @@ project(GXTK7
   LANGUAGES CXX
 )
 
+option(GXTK7_BUILD_EXAMPLES "Build the example applications" ON)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -129,4 +131,28 @@ qt_add_qml_module(gxde_style_plugin
   RESOURCES ${GXDE_STYLE_ASSETS}
 )
 
-add_subdirectory(examples/gallery)
+# The QML files are compiled into the backing library's resources, so the
+# module directory only needs the qmldir, the type info, the plugin and the
+# backing library it loads through $ORIGIN.
+qt_query_qml_module(gxde_style_plugin
+  TARGET_PATH GXDE_STYLE_TARGET_PATH
+  PLUGIN_TARGET GXDE_STYLE_PLUGIN_TARGET
+  QMLDIR GXDE_STYLE_QMLDIR
+  TYPEINFO GXDE_STYLE_TYPEINFO
+)
+set(GXDE_STYLE_INSTALL_DIR "${QT6_INSTALL_QML}/${GXDE_STYLE_TARGET_PATH}")
+
+set_target_properties(${GXDE_STYLE_PLUGIN_TARGET} PROPERTIES
+  INSTALL_RPATH "$ORIGIN"
+)
+
+install(TARGETS gxde_style_plugin ${GXDE_STYLE_PLUGIN_TARGET}
+  LIBRARY DESTINATION "${GXDE_STYLE_INSTALL_DIR}"
+)
+install(FILES "${GXDE_STYLE_QMLDIR}" "${GXDE_STYLE_TYPEINFO}"
+  DESTINATION "${GXDE_STYLE_INSTALL_DIR}"
+)
+
+if(GXTK7_BUILD_EXAMPLES)
+  add_subdirectory(examples/gallery)
+endif()

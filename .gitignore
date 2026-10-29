@@ -58,3 +58,12 @@ compile_commands.json
 # IDE Settings
 build/*
 .cache/*
+
+# Debian packaging
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper.log
+debian/qml6-module-qtquick-controls-gxde/
+obj-*/

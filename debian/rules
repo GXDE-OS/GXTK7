@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DGXTK7_BUILD_EXAMPLES=OFF
+
+# libgxde_style_plugin.so is private to the QML module: it lives next to the
+# plugin in the module directory and is found through the plugin's $ORIGIN
+# RUNPATH, so it gets no shlibs entry.
+override_dh_makeshlibs:
+	dh_makeshlibs -X/qt6/qml/

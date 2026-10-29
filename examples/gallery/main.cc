@@ -25,17 +25,12 @@ int main(int argc, char** argv) {
   QGuiApplication::setOrganizationName("GXDE");
   QGuiApplication::setApplicationName("gxde-quick-gallery");
 
-  // Configure QQuickStyle to use Gxde style
-  QQuickStyle::setStyle("Gxde");
+  // Custom styles are named by their full module URI; only Qt's own styles
+  // resolve from a short name.
+  QQuickStyle::setStyle("QtQuick.Controls.Gxde");
   QQuickStyle::setFallbackStyle("Basic");
 
   QQmlApplicationEngine engine;
-
-  // Add import paths for the GXDE style module
-  engine.addImportPath("qrc:/qt-project.org/imports");
-  engine.addImportPath("qrc:/");
-  engine.addImportPath("./build");
-  engine.addImportPath("src/style/qml");
 
   const QUrl url(QStringLiteral("qrc:/main.qml"));
   QObject::connect(

@@ -1,0 +1,27 @@
+Source: gxtk7
+Section: libs
+Priority: optional
+Maintainer: CharOfString <root@charofstring.cc>
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake (>= 3.20),
+ qt6-base-dev,
+ qt6-declarative-dev,
+ qt6-declarative-dev-tools,
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Homepage: https://github.com/GXDE-OS/GXTK7
+Vcs-Browser: https://github.com/GXDE-OS/GXTK7
+Vcs-Git: https://github.com/GXDE-OS/GXTK7.git
+
+Package: qml6-module-qtquick-controls-gxde
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ qml6-module-qtqml-models,
+ qml6-module-qtquick,
+ qml6-module-qtquick-controls,
+ qml6-module-qtquick-templates,
+Description: GXTK 7 is GXDE-OS's QtQuick UI library & style plugin that mimics Deepin's DTK2Widget library.

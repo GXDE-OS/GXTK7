@@ -94,11 +94,31 @@ Then, you may run the example:
 ./examples/gallery/gxde_gallery
 ```
 
+#### Build a Debian Package
+Install the build dependencies, then build the binary package from the source root:
+```sh
+$ sudo apt build-dep .
+$ dpkg-buildpackage -us -uc -b
+```
+
+This produces `qml6-module-qtquick-controls-gxde`, which installs the `QtQuick.Controls.Gxde` module into the system Qt QML directory.
+
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-For usage, please refer to the [widget gallery example](./examples/gallery/) and the [documentation](./docs/).
+Select the style by its full module name, either in C++:
+```cpp
+QQuickStyle::setStyle("QtQuick.Controls.Gxde");
+```
+or through the environment:
+```sh
+$ QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde ./your_app
+```
+
+The `GxdeTheme` singleton (`import QtQuick.Controls.Gxde`) switches between the light and dark schemes through its `isDark` property.
+
+For more, please refer to the [widget gallery example](./examples/gallery/) and the [documentation](./docs/).
 
 
 
