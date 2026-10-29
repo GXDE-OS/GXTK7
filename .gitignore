@@ -67,3 +67,8 @@ debian/*.substvars
 debian/*.debhelper.log
 debian/qml6-module-qtquick-controls-gxde/
 obj-*/
+
+# Arch packaging
+arch/src/
+arch/pkg/
+arch/*.pkg.tar.*

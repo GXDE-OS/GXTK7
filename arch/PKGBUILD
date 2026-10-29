@@ -1,0 +1,28 @@
+# Maintainer: CharOfString <root@charofstring.cc>
+
+pkgname=gxtk7
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Qt Quick Controls style with the DTK2 look for GXDE'
+arch=('x86_64')
+url='https://github.com/GXDE-OS/GXTK7'
+license=('GPL-3.0-or-later')
+depends=(
+  'gcc-libs'
+  'glibc'
+  'qt6-base'
+  'qt6-declarative'
+)
+makedepends=('cmake')
+
+build() {
+  cmake -B build -S "$startdir/.." \
+    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DGXTK7_BUILD_EXAMPLES=OFF
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}

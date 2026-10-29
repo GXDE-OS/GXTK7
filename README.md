@@ -103,6 +103,13 @@ $ dpkg-buildpackage -us -uc -b
 
 This produces `qml6-module-qtquick-controls-gxde`, which installs the `QtQuick.Controls.Gxde` module into the system Qt QML directory.
 
+#### Build an Arch Linux Package
+Build and install the package from the `arch` directory of the checkout:
+```sh
+$ cd arch
+$ makepkg -si
+```
+
 
 
 <!-- USAGE EXAMPLES -->
