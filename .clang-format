@@ -15,7 +15,7 @@ AllowShortLoopsOnASingleLine: false
 BreakBeforeBraces: Attach
 ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
-Cpp11BracketedInitializers: true
+Cpp11BracedListStyle: true
 DerivePointerAlignment: false
 PointerAlignment: Left
 Standard: c++17
