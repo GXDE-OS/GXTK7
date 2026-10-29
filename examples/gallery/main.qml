@@ -392,6 +392,44 @@ ApplicationWindow {
             color: GxdePalette.textDisabled
           }
 
+          RowLayout {
+            spacing: 12
+
+            ImageButton {
+              id: imageButton
+              checkable: true
+              normalSource: "qrc:/qt-project.org/imports/QtQuick/Controls/Gxde/assets/light/checkbox/radio_unchecked.png"
+              hoverSource: "qrc:/qt-project.org/imports/QtQuick/Controls/Gxde/assets/light/checkbox/radio_unchecked_hover.png"
+              pressSource: "qrc:/qt-project.org/imports/QtQuick/Controls/Gxde/assets/light/checkbox/radio_unchecked_press.png"
+              checkedSource: "qrc:/qt-project.org/imports/QtQuick/Controls/Gxde/assets/light/checkbox/radio_checked.png"
+            }
+
+            Avatar {
+              Layout.preferredWidth: 40
+              Layout.preferredHeight: 40
+              source: "qrc:/qt-project.org/imports/QtQuick/Controls/Gxde/assets/light/checkbox/radio_checked.png"
+              onClicked: selected = !selected
+            }
+
+            ArrowRectangle {
+              arrowDirection: ArrowRectangle.ArrowLeft
+              contentItem: Label {
+                text: imageButton.checked ? qsTr("Image button: checked")
+                                          : qsTr("Image button: click me")
+              }
+            }
+
+            ArrowRectangle {
+              arrowDirection: ArrowRectangle.ArrowBottom
+              backgroundColor: Qt.rgba(0, 0, 0, 0.8)
+              borderWidth: 0
+              contentItem: Label {
+                text: qsTr("Dark bubble")
+                color: "#ffffff"
+              }
+            }
+          }
+
           Item { Layout.fillHeight: true }
 
           RowLayout {

@@ -39,6 +39,8 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 qt_add_library(gxde_style_plugin SHARED
+  src/style/avatar_image/avatar_image.h
+  src/style/avatar_image/avatar_image.cc
   src/style/gxde_theme/gxde_theme.h
   src/style/gxde_theme/gxde_theme.cc
 )
@@ -50,6 +52,7 @@ target_include_directories(gxde_style_plugin
   PRIVATE
     # The generated QML type registration includes QML_ELEMENT headers by
     # file name only.
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/style/avatar_image
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/gxde_theme
 )
 
@@ -65,6 +68,8 @@ target_link_libraries(gxde_style_plugin
 set(GXDE_STYLE_QML_DIR src/style/qml/gxde)
 set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/ApplicationWindow.qml
+  ${GXDE_STYLE_QML_DIR}/ArrowRectangle.qml
+  ${GXDE_STYLE_QML_DIR}/Avatar.qml
   ${GXDE_STYLE_QML_DIR}/BusyIndicator.qml
   ${GXDE_STYLE_QML_DIR}/Button.qml
   ${GXDE_STYLE_QML_DIR}/CheckBox.qml
@@ -74,6 +79,7 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/Frame.qml
   ${GXDE_STYLE_QML_DIR}/GroupBox.qml
   ${GXDE_STYLE_QML_DIR}/GxdePalette.qml
+  ${GXDE_STYLE_QML_DIR}/ImageButton.qml
   ${GXDE_STYLE_QML_DIR}/ItemDelegate.qml
   ${GXDE_STYLE_QML_DIR}/Label.qml
   ${GXDE_STYLE_QML_DIR}/Menu.qml
