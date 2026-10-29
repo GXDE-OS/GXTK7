@@ -72,3 +72,6 @@ obj-*/
 arch/src/
 arch/pkg/
 arch/*.pkg.tar.*
+
+# Manual overrides
+!./build-deb
