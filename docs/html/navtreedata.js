@@ -33,16 +33,17 @@ var NAVTREE =
         [ "Prerequisites", "index.html#autotoc_md3", null ],
         [ "Installation", "index.html#autotoc_md4", [
           [ "Build Manually", "index.html#autotoc_md5", null ],
-          [ "Build a Debian Package", "index.html#autotoc_md6", null ]
+          [ "Build a Debian Package", "index.html#autotoc_md6", null ],
+          [ "Build an Arch Linux Package", "index.html#autotoc_md7", null ]
         ] ]
       ] ],
-      [ "Usage", "index.html#autotoc_md7", null ],
-      [ "Roadmap", "index.html#autotoc_md8", null ],
-      [ "Contributing", "index.html#autotoc_md9", [
-        [ "Top contributors:", "index.html#autotoc_md10", null ]
+      [ "Usage", "index.html#autotoc_md8", null ],
+      [ "Roadmap", "index.html#autotoc_md9", null ],
+      [ "Contributing", "index.html#autotoc_md10", [
+        [ "Top contributors:", "index.html#autotoc_md11", null ]
       ] ],
-      [ "License", "index.html#autotoc_md11", null ],
-      [ "Acknowledgments", "index.html#autotoc_md12", null ],
+      [ "License", "index.html#autotoc_md12", null ],
+      [ "Acknowledgments", "index.html#autotoc_md13", null ],
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],

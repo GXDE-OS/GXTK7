@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html',''
 <p><br  />
  </p><div align="center">    </div><div align="center"><h3 align="center">GXTK 7</h3>
 </div><div align="center"></div><div align="center"> </div><div align="center"> GXDE's Qt Quick UI plugin &amp; component library. <br  />
- <a href="./docs/"><b>Explore the docs »</b></a> <br  />
+ <a href="./docs/html/"><b>Explore the docs »</b></a> <br  />
  <br  />
  <a href="https://github.com/GXDE-OS/GXTK7/actions">View CI Status</a> &middot; <a href="https://github.com/GXDE-OS/GXTK7/issues/new">Report Bug</a> &middot; <a href="https://github.com/GXDE-OS/GXTK7/issues/new">Request Feature</a> </div><div align="center"> </div><h2 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
 About The Project</h2>
@@ -155,26 +155,30 @@ Build a Debian Package</h4>
 <p>Install the build dependencies, then build the binary package from the source root: </p><div class="fragment"><div class="line">$ sudo apt build-dep .</div>
 <div class="line">$ dpkg-buildpackage -us -uc -b</div>
 </div><!-- fragment --><p>This produces <span class="tt">qml6-module-qtquick-controls-gxde</span>, which installs the <span class="tt">QtQuick.Controls.Gxde</span> module into the system Qt QML directory.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h4 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Build an Arch Linux Package</h4>
+<p>Build and install the package from the <span class="tt">arch</span> directory of the checkout: </p><div class="fragment"><div class="line">$ cd arch</div>
+<div class="line">$ makepkg -si</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Usage</h2>
 <p>Select the style by its full module name, either in C++: </p><div class="fragment"><div class="line">QQuickStyle::setStyle(<span class="stringliteral">&quot;QtQuick.Controls.Gxde&quot;</span>);</div>
 </div><!-- fragment --><p> or through the environment: </p><div class="fragment"><div class="line">$ QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde ./your_app</div>
 </div><!-- fragment --><p>The <span class="tt">GxdeTheme</span> singleton (<span class="tt">import QtQuick.Controls.Gxde</span>) switches between the light and dark schemes through its <span class="tt">isDark</span> property.</p>
 <p>For more, please refer to the <a href="./examples/gallery/">widget gallery example</a> and the <a href="./docs/">documentation</a>.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Roadmap</h2>
 <ul class="check">
 <li class="checked">To provide basic QtQuick style.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Contributing</h2>
-<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
 Top contributors:</h3>
 <p><a href="https://github.com/GXDE-OS/GXTK7/graphs/contributors"><img src="https://contrib.rocks/image?repo=GXDE-OS/GXTK7" alt="contrib.rocks image" class="inline"/> </a></p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
 License</h2>
 <p>GXTK7 is distributed under GNU GENERAL PUBLIC LICENSE Version 3. You may find a copy of the license <a href="./LICENSE">here</a>.</p>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md13"></a>
 Acknowledgments</h2>
 <ul>
 <li><b>DTK2Widget-Qt6</b>: <a href="https://github.com/GXDE-OS/dtk2widget-qt6">https://github.com/GXDE-OS/dtk2widget-qt6</a></li>

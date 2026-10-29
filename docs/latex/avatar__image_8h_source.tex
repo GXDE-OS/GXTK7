@@ -1,0 +1,82 @@
+\doxysection{avatar\+\_\+image.\+h}
+\hypertarget{avatar__image_8h_source}{}\label{avatar__image_8h_source}\index{src/style/avatar\_image/avatar\_image.h@{src/style/avatar\_image/avatar\_image.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2026\ CharOfString\ <root@charofstring.cc>}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the\ License,\ or}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ along\ with\ this\ program.\ \ If\ not,\ see\ <https://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ SRC\_STYLE\_AVATAR\_IMAGE\_AVATAR\_IMAGE\_H\_}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ SRC\_STYLE\_AVATAR\_IMAGE\_AVATAR\_IMAGE\_H\_}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QtQmlIntegration/qqmlintegration.h>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QImage>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QQuickPaintedItem>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <QUrl>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }gxde\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classgxde_1_1AvatarImage_a0af80388b79fbad63da837bdab2995d8}{AvatarImage}}\ :\ \textcolor{keyword}{public}\ QQuickPaintedItem\ \{}
+\DoxyCodeLine{00037\ \ \ Q\_OBJECT}
+\DoxyCodeLine{00038\ \ \ QML\_ELEMENT}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ Q\_PROPERTY(QUrl\ source\ READ\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_aa9b530c629c9a6b5ae91d583347d60be}{Source}}\ WRITE\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_adca8c9c49ad5878e21c7325c9fa662f0}{SetSource}}\ NOTIFY\ sourceChanged)}
+\DoxyCodeLine{00041\ \ \ Q\_PROPERTY(\textcolor{keywordtype}{bool}\ selected\ READ\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_aab99000d8f47cfb52c7c292ad00f2357}{IsSelected}}\ WRITE\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_abb39ea613f80e944a352394b7490cb5a}{SetSelected}}\ NOTIFY}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ selectedChanged)}
+\DoxyCodeLine{00043\ \ \ Q\_PROPERTY(\textcolor{keywordtype}{int}\ ringWidth\ READ\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_a7918843ab9d73ef5989130bb66964e64}{RingWidth}}\ WRITE\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_abc26881422b3632d27801c86232f5b7a}{SetRingWidth}}\ NOTIFY}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ringWidthChanged)}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_a0af80388b79fbad63da837bdab2995d8}{AvatarImage}}(QQuickItem*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ [[nodiscard]]\ QUrl\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_aa9b530c629c9a6b5ae91d583347d60be}{Source}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_adca8c9c49ad5878e21c7325c9fa662f0}{SetSource}}(\textcolor{keyword}{const}\ QUrl\&\ source);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_aab99000d8f47cfb52c7c292ad00f2357}{IsSelected}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_abb39ea613f80e944a352394b7490cb5a}{SetSelected}}(\textcolor{keywordtype}{bool}\ selected);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_a7918843ab9d73ef5989130bb66964e64}{RingWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_abc26881422b3632d27801c86232f5b7a}{SetRingWidth}}(\textcolor{keywordtype}{int}\ width);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_a426a5b392702b7b22bd5f1a95d612c7e}{paint}}(QPainter*\ painter)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ signals:}
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{void}\ sourceChanged();\ \ \ \ \ \textcolor{comment}{//\ NOLINT(readability-\/identifier-\/naming)}}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{void}\ selectedChanged();\ \ \ \textcolor{comment}{//\ NOLINT(readability-\/identifier-\/naming)}}
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordtype}{void}\ ringWidthChanged();\ \ \textcolor{comment}{//\ NOLINT(readability-\/identifier-\/naming)}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classgxde_1_1AvatarImage_af31f1532eb9a7de444328f8eb16d2bd2}{geometryChange}}(\textcolor{keyword}{const}\ QRectF\&\ new\_geometry,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ QRectF\&\ old\_geometry)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00110\ \ \ QUrl\ source\_;}
+\DoxyCodeLine{00111\ \ \ QImage\ image\_;}
+\DoxyCodeLine{00112\ \ \ \textcolor{comment}{//\ image\_\ scaled\ to\ the\ item\ size,\ in\ device\ pixels.}}
+\DoxyCodeLine{00113\ \ \ QImage\ scaled\_;}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordtype}{bool}\ selected\_\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{int}\ ring\_width\_\{2\};}
+\DoxyCodeLine{00116\ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \}\ \ \textcolor{comment}{//\ namespace\ gxde}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ SRC\_STYLE\_AVATAR\_IMAGE\_AVATAR\_IMAGE\_H\_}}
+
+\end{DoxyCode}

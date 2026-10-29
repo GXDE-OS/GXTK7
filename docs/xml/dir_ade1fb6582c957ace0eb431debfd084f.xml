@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="dir_ade1fb6582c957ace0eb431debfd084f" kind="dir">
     <compoundname>src/style</compoundname>
+    <innerdir refid="dir_a369d88d74289cda247644226e70049e">src/style/avatar_image</innerdir>
     <innerdir refid="dir_14de577f6d3be4d7baf03e43b10d4d60">src/style/gxde_theme</innerdir>
     <briefdescription>
     </briefdescription>

@@ -20,7 +20,7 @@
  
 
  GXDE\textquotesingle{}s Qt Quick UI plugin \& component library. ~\newline
- \href{./docs/}{\texttt{{\bfseries{Explore the docs »}}}} ~\newline
+ \href{./docs/html/}{\texttt{{\bfseries{Explore the docs »}}}} ~\newline
  ~\newline
  \href{https://github.com/GXDE-OS/GXTK7/actions}{\texttt{View CI Status}} \textperiodcentered{} \href{https://github.com/GXDE-OS/GXTK7/issues/new}{\texttt{Report Bug}} \textperiodcentered{} \href{https://github.com/GXDE-OS/GXTK7/issues/new}{\texttt{Request Feature}} 
 
@@ -73,7 +73,14 @@ Install the build dependencies, then build the binary package from the source ro
 \end{DoxyCode}
 
 
-This produces {\ttfamily qml6-\/module-\/qtquick-\/controls-\/gxde}, which installs the {\ttfamily Qt\+Quick.\+Controls.\+Gxde} module into the system Qt QML directory.\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{index_autotoc_md7}
+This produces {\ttfamily qml6-\/module-\/qtquick-\/controls-\/gxde}, which installs the {\ttfamily Qt\+Quick.\+Controls.\+Gxde} module into the system Qt QML directory.\hypertarget{index_autotoc_md7}{}\doxysubsubsubsection{\texorpdfstring{Build an Arch Linux Package}{Build an Arch Linux Package}}\label{index_autotoc_md7}
+Build and install the package from the {\ttfamily arch} directory of the checkout: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ cd\ arch}
+\DoxyCodeLine{\$\ makepkg\ -\/si}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{index_autotoc_md8}
 Select the style by its full module name, either in C++: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{QQuickStyle::setStyle(\textcolor{stringliteral}{"{}QtQuick.Controls.Gxde"{}});}
@@ -88,14 +95,14 @@ Select the style by its full module name, either in C++:
 
 The {\ttfamily Gxde\+Theme} singleton ({\ttfamily import Qt\+Quick.\+Controls.\+Gxde}) switches between the light and dark schemes through its {\ttfamily is\+Dark} property.
 
-For more, please refer to the \href{./examples/gallery/}{\texttt{widget gallery example}} and the \href{./docs/}{\texttt{documentation}}.\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Roadmap}{Roadmap}}\label{index_autotoc_md8}
+For more, please refer to the \href{./examples/gallery/}{\texttt{widget gallery example}} and the \href{./docs/}{\texttt{documentation}}.\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Roadmap}{Roadmap}}\label{index_autotoc_md9}
 
 \begin{DoxyItemize}
 \item[\DoxyChecked] To provide basic Qt\+Quick style.
-\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md9}
-\hypertarget{index_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{Top contributors:}{Top contributors:}}\label{index_autotoc_md10}
-\href{https://github.com/GXDE-OS/GXTK7/graphs/contributors}{\texttt{ }}\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{License}{License}}\label{index_autotoc_md11}
-GXTK7 is distributed under GNU GENERAL PUBLIC LICENSE Version 3. You may find a copy of the license \href{./LICENSE}{\texttt{here}}.\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{Acknowledgments}{Acknowledgments}}\label{index_autotoc_md12}
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md10}
+\hypertarget{index_autotoc_md11}{}\doxysubsubsection{\texorpdfstring{Top contributors:}{Top contributors:}}\label{index_autotoc_md11}
+\href{https://github.com/GXDE-OS/GXTK7/graphs/contributors}{\texttt{ }}\hypertarget{index_autotoc_md12}{}\doxysubsection{\texorpdfstring{License}{License}}\label{index_autotoc_md12}
+GXTK7 is distributed under GNU GENERAL PUBLIC LICENSE Version 3. You may find a copy of the license \href{./LICENSE}{\texttt{here}}.\hypertarget{index_autotoc_md13}{}\doxysubsection{\texorpdfstring{Acknowledgments}{Acknowledgments}}\label{index_autotoc_md13}
 
 \begin{DoxyItemize}
 \item {\bfseries{DTK2\+Widget-\/\+Qt6}}: \href{https://github.com/GXDE-OS/dtk2widget-qt6}{\texttt{https:\+/\+/\+github.\+com/\+\+GXDE-\/\+OS/\+dtk2widget-\/qt6}}

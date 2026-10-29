@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="classgxde_1_1AvatarImage" kind="class" language="C++" prot="public">
+    <compoundname>gxde::AvatarImage</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QQuickPaintedItem</basecompoundref>
+    <includes refid="avatar__image_8h" local="no">avatar_image.h</includes>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="classgxde_1_1AvatarImage_1ade7d26adf35bda9555a195ebaa013d69" prot="public" static="no" readable="yes" writable="yes" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>QML_ELEMENTQUrl</type>
+        <definition>QML_ELEMENTQUrl gxde::AvatarImage::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>gxde::AvatarImage::source</qualifiedname>
+        <read>Source</read>
+        <write>SetSource</write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="40" column="3" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgxde_1_1AvatarImage_1ac7d67949f3983695b28fbba1c0d12545" prot="public" static="no" readable="yes" writable="yes" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool gxde::AvatarImage::selected</definition>
+        <argsstring></argsstring>
+        <name>selected</name>
+        <qualifiedname>gxde::AvatarImage::selected</qualifiedname>
+        <read>IsSelected</read>
+        <write>SetSelected</write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="41" column="3" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="classgxde_1_1AvatarImage_1a27d863c9f160aa630dba555ea5440408" prot="public" static="no" readable="yes" writable="yes" gettable="no" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int gxde::AvatarImage::ringWidth</definition>
+        <argsstring></argsstring>
+        <name>ringWidth</name>
+        <qualifiedname>gxde::AvatarImage::ringWidth</qualifiedname>
+        <read>RingWidth</read>
+        <write>SetRingWidth</write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="42" column="3" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgxde_1_1AvatarImage_1a51c3e85af802d42a7c003cb83a249dfb" prot="private" static="no" mutable="no">
+        <type>QUrl</type>
+        <definition>QUrl gxde::AvatarImage::source_</definition>
+        <argsstring></argsstring>
+        <name>source_</name>
+        <qualifiedname>gxde::AvatarImage::source_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="108" column="8" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgxde_1_1AvatarImage_1ae808e2d38561886564b13d0123625d0b" prot="private" static="no" mutable="no">
+        <type>QImage</type>
+        <definition>QImage gxde::AvatarImage::image_</definition>
+        <argsstring></argsstring>
+        <name>image_</name>
+        <qualifiedname>gxde::AvatarImage::image_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="109" column="10" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgxde_1_1AvatarImage_1af8283469662e218d527d66dbb27a1091" prot="private" static="no" mutable="no">
+        <type>QImage</type>
+        <definition>QImage gxde::AvatarImage::scaled_</definition>
+        <argsstring></argsstring>
+        <name>scaled_</name>
+        <qualifiedname>gxde::AvatarImage::scaled_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="111" column="10" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgxde_1_1AvatarImage_1a2f02a302d0fca698bc0ec0e0172ec121" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gxde::AvatarImage::selected_</definition>
+        <argsstring></argsstring>
+        <name>selected_</name>
+        <qualifiedname>gxde::AvatarImage::selected_</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="112" column="8" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgxde_1_1AvatarImage_1a22d3a0954acf028348cd0d2325baef50" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gxde::AvatarImage::ring_width_</definition>
+        <argsstring></argsstring>
+        <name>ring_width_</name>
+        <qualifiedname>gxde::AvatarImage::ring_width_</qualifiedname>
+        <initializer>{2}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="113" column="7" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1a0af80388b79fbad63da837bdab2995d8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gxde::AvatarImage::AvatarImage</definition>
+        <argsstring>(QQuickItem *parent=nullptr)</argsstring>
+        <name>AvatarImage</name>
+        <qualifiedname>gxde::AvatarImage::AvatarImage</qualifiedname>
+        <param>
+          <type>QQuickItem *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Constructs the item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The optional parent item. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="49" column="12" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1aa9b530c629c9a6b5ae91d583347d60be" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QUrl</type>
+        <definition>QUrl gxde::AvatarImage::Source</definition>
+        <argsstring>() const</argsstring>
+        <name>Source</name>
+        <qualifiedname>gxde::AvatarImage::Source</qualifiedname>
+        <briefdescription>
+<para>Returns the picture to paint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A local file or Qt resource URL. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="55" column="9" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1adca8c9c49ad5878e21c7325c9fa662f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::SetSource</definition>
+        <argsstring>(const QUrl &amp;source)</argsstring>
+        <name>SetSource</name>
+        <qualifiedname>gxde::AvatarImage::SetSource</qualifiedname>
+        <param>
+          <type>const QUrl &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Sets the picture to paint and loads it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A local file or Qt resource URL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="61" column="8" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="54" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1aab99000d8f47cfb52c7c292ad00f2357" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool gxde::AvatarImage::IsSelected</definition>
+        <argsstring>() const</argsstring>
+        <name>IsSelected</name>
+        <qualifiedname>gxde::AvatarImage::IsSelected</qualifiedname>
+        <briefdescription>
+<para>Returns whether the white selection ring is shown. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True when selected. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="67" column="9" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1abb39ea613f80e944a352394b7490cb5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::SetSelected</definition>
+        <argsstring>(bool selected)</argsstring>
+        <name>SetSelected</name>
+        <qualifiedname>gxde::AvatarImage::SetSelected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>selected</declname>
+        </param>
+        <briefdescription>
+<para>Shows or hides the white selection ring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>selected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to show the ring. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="73" column="8" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="71" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1a7918843ab9d73ef5989130bb66964e64" prot="public" static="no" nodiscard="yes" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gxde::AvatarImage::RingWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>RingWidth</name>
+        <qualifiedname>gxde::AvatarImage::RingWidth</qualifiedname>
+        <briefdescription>
+<para>Returns the visible width of the selection ring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Width in logical pixels. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="79" column="8" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1abc26881422b3632d27801c86232f5b7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::SetRingWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>SetRingWidth</name>
+        <qualifiedname>gxde::AvatarImage::SetRingWidth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Sets the visible width of the selection ring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width in logical pixels. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="85" column="8" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="85" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1a426a5b392702b7b22bd5f1a95d612c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::paint</definition>
+        <argsstring>(QPainter *painter) override</argsstring>
+        <name>paint</name>
+        <qualifiedname>gxde::AvatarImage::paint</qualifiedname>
+        <param>
+          <type>QPainter *</type>
+          <declname>painter</declname>
+        </param>
+        <briefdescription>
+<para>Paints the clipped picture and the ring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>painter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Painter of the item. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="91" column="8" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="95" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="signal">
+      <memberdef kind="signal" id="classgxde_1_1AvatarImage_1a42b1597930effad56dc16d1abb286377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::sourceChanged</definition>
+        <argsstring>()</argsstring>
+        <name>sourceChanged</name>
+        <qualifiedname>gxde::AvatarImage::sourceChanged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="94" column="8"/>
+      </memberdef>
+      <memberdef kind="signal" id="classgxde_1_1AvatarImage_1a970b0e19908ede1598429f9811a61d03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::selectedChanged</definition>
+        <argsstring>()</argsstring>
+        <name>selectedChanged</name>
+        <qualifiedname>gxde::AvatarImage::selectedChanged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="95" column="8"/>
+      </memberdef>
+      <memberdef kind="signal" id="classgxde_1_1AvatarImage_1a999b84c2ef0c696905f65b40176fb407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::ringWidthChanged</definition>
+        <argsstring>()</argsstring>
+        <name>ringWidthChanged</name>
+        <qualifiedname>gxde::AvatarImage::ringWidthChanged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="96" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgxde_1_1AvatarImage_1af31f1532eb9a7de444328f8eb16d2bd2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gxde::AvatarImage::geometryChange</definition>
+        <argsstring>(const QRectF &amp;new_geometry, const QRectF &amp;old_geometry) override</argsstring>
+        <name>geometryChange</name>
+        <qualifiedname>gxde::AvatarImage::geometryChange</qualifiedname>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>new_geometry</declname>
+        </param>
+        <param>
+          <type>const QRectF &amp;</type>
+          <declname>old_geometry</declname>
+        </param>
+        <briefdescription>
+<para>Drops the scaled picture when the size changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_geometry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New geometry of the item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>old_geometry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Old geometry of the item. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/style/avatar_image/avatar_image.h" line="104" column="8" bodyfile="src/style/avatar_image/avatar_image.cc" bodystart="133" bodyend="139"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Paints a picture in a circle, like DTK&apos;s AvatarWidget. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It uses QPainter, so it looks the same on every scene graph backend, also the software one. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QQuickPaintedItem</label>
+      </node>
+      <node id="1">
+        <label>gxde::AvatarImage</label>
+        <link refid="classgxde_1_1AvatarImage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QQuickPaintedItem</label>
+      </node>
+      <node id="1">
+        <label>gxde::AvatarImage</label>
+        <link refid="classgxde_1_1AvatarImage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/style/avatar_image/avatar_image.h" line="36" column="1" bodyfile="src/style/avatar_image/avatar_image.h" bodystart="36" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classgxde_1_1AvatarImage_1a0af80388b79fbad63da837bdab2995d8" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>AvatarImage</name></member>
+      <member refid="classgxde_1_1AvatarImage_1af31f1532eb9a7de444328f8eb16d2bd2" prot="protected" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>geometryChange</name></member>
+      <member refid="classgxde_1_1AvatarImage_1ae808e2d38561886564b13d0123625d0b" prot="private" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>image_</name></member>
+      <member refid="classgxde_1_1AvatarImage_1aab99000d8f47cfb52c7c292ad00f2357" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>IsSelected</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a426a5b392702b7b22bd5f1a95d612c7e" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>paint</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a22d3a0954acf028348cd0d2325baef50" prot="private" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>ring_width_</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a7918843ab9d73ef5989130bb66964e64" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>RingWidth</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a27d863c9f160aa630dba555ea5440408" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>ringWidth</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a999b84c2ef0c696905f65b40176fb407" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>ringWidthChanged</name></member>
+      <member refid="classgxde_1_1AvatarImage_1af8283469662e218d527d66dbb27a1091" prot="private" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>scaled_</name></member>
+      <member refid="classgxde_1_1AvatarImage_1ac7d67949f3983695b28fbba1c0d12545" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>selected</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a2f02a302d0fca698bc0ec0e0172ec121" prot="private" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>selected_</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a970b0e19908ede1598429f9811a61d03" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>selectedChanged</name></member>
+      <member refid="classgxde_1_1AvatarImage_1abc26881422b3632d27801c86232f5b7a" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>SetRingWidth</name></member>
+      <member refid="classgxde_1_1AvatarImage_1abb39ea613f80e944a352394b7490cb5a" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>SetSelected</name></member>
+      <member refid="classgxde_1_1AvatarImage_1adca8c9c49ad5878e21c7325c9fa662f0" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>SetSource</name></member>
+      <member refid="classgxde_1_1AvatarImage_1aa9b530c629c9a6b5ae91d583347d60be" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>Source</name></member>
+      <member refid="classgxde_1_1AvatarImage_1ade7d26adf35bda9555a195ebaa013d69" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>source</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a51c3e85af802d42a7c003cb83a249dfb" prot="private" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>source_</name></member>
+      <member refid="classgxde_1_1AvatarImage_1a42b1597930effad56dc16d1abb286377" prot="public" virt="non-virtual"><scope>gxde::AvatarImage</scope><name>sourceChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

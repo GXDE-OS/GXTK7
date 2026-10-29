@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="avatar__image_8h" kind="file" language="C++">
+    <compoundname>avatar_image.h</compoundname>
+    <includes local="no">QtQmlIntegration/qqmlintegration.h</includes>
+    <includes local="no">QImage</includes>
+    <includes local="no">QQuickPaintedItem</includes>
+    <includes local="no">QUrl</includes>
+    <includedby refid="avatar__image_8cc" local="yes">src/style/avatar_image/avatar_image.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/style/avatar_image/avatar_image.h</label>
+        <link refid="avatar__image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>QImage</label>
+      </node>
+      <node id="4">
+        <label>QQuickPaintedItem</label>
+      </node>
+      <node id="5">
+        <label>QUrl</label>
+      </node>
+      <node id="2">
+        <label>QtQmlIntegration/qqmlintegration.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgxde_1_1AvatarImage" prot="public">gxde::AvatarImage</innerclass>
+    <innernamespace refid="namespacegxde">gxde</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2026<sp/>CharOfString<sp/>&lt;root@charofstring.cc&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;https://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_STYLE_AVATAR_IMAGE_AVATAR_IMAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRC_STYLE_AVATAR_IMAGE_AVATAR_IMAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtQmlIntegration/qqmlintegration.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QImage&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QQuickPaintedItem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QUrl&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">gxde<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classgxde_1_1AvatarImage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgxde_1_1AvatarImage_1a0af80388b79fbad63da837bdab2995d8" kindref="member">AvatarImage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QQuickPaintedItem<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>QML_ELEMENT</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>Q_PROPERTY(QUrl<sp/>source<sp/>READ<sp/><ref refid="classgxde_1_1AvatarImage_1aa9b530c629c9a6b5ae91d583347d60be" kindref="member">Source</ref><sp/>WRITE<sp/><ref refid="classgxde_1_1AvatarImage_1adca8c9c49ad5878e21c7325c9fa662f0" kindref="member">SetSource</ref><sp/>NOTIFY<sp/>sourceChanged)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>selected<sp/>READ<sp/><ref refid="classgxde_1_1AvatarImage_1aab99000d8f47cfb52c7c292ad00f2357" kindref="member">IsSelected</ref><sp/>WRITE<sp/><ref refid="classgxde_1_1AvatarImage_1abb39ea613f80e944a352394b7490cb5a" kindref="member">SetSelected</ref><sp/>NOTIFY</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>selectedChanged)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>Q_PROPERTY(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ringWidth<sp/>READ<sp/><ref refid="classgxde_1_1AvatarImage_1a7918843ab9d73ef5989130bb66964e64" kindref="member">RingWidth</ref><sp/>WRITE<sp/><ref refid="classgxde_1_1AvatarImage_1abc26881422b3632d27801c86232f5b7a" kindref="member">SetRingWidth</ref><sp/>NOTIFY</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ringWidthChanged)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1a0af80388b79fbad63da837bdab2995d8" kindref="member">AvatarImage</ref>(QQuickItem*<sp/>parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/>QUrl<sp/><ref refid="classgxde_1_1AvatarImage_1aa9b530c629c9a6b5ae91d583347d60be" kindref="member">Source</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1adca8c9c49ad5878e21c7325c9fa662f0" kindref="member">SetSource</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QUrl&amp;<sp/>source);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1aab99000d8f47cfb52c7c292ad00f2357" kindref="member">IsSelected</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1abb39ea613f80e944a352394b7490cb5a" kindref="member">SetSelected</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>selected);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1a7918843ab9d73ef5989130bb66964e64" kindref="member">RingWidth</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1abc26881422b3632d27801c86232f5b7a" kindref="member">SetRingWidth</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1a426a5b392702b7b22bd5f1a95d612c7e" kindref="member">paint</ref>(QPainter*<sp/>painter)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/>signals:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sourceChanged();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINT(readability-identifier-naming)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>selectedChanged();<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINT(readability-identifier-naming)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ringWidthChanged();<sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINT(readability-identifier-naming)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classgxde_1_1AvatarImage_1af31f1532eb9a7de444328f8eb16d2bd2" kindref="member">geometryChange</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QRectF&amp;<sp/>new_geometry,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QRectF&amp;<sp/>old_geometry)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>QUrl<sp/>source_;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>QImage<sp/>image_;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>image_<sp/>scaled<sp/>to<sp/>the<sp/>item<sp/>size,<sp/>in<sp/>device<sp/>pixels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>QImage<sp/>scaled_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>selected_{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ring_width_{2};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>gxde</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SRC_STYLE_AVATAR_IMAGE_AVATAR_IMAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/style/avatar_image/avatar_image.h"/>
+  </compounddef>
+</doxygen>

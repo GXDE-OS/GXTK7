@@ -1,0 +1,217 @@
+\doxysection{gxde::Avatar\+Image Class Reference}
+\hypertarget{classgxde_1_1AvatarImage}{}\label{classgxde_1_1AvatarImage}\index{gxde::AvatarImage@{gxde::AvatarImage}}
+
+
+Paints a picture in a circle, like DTK\textquotesingle{}s Avatar\+Widget.  
+
+
+
+
+{\ttfamily \+\#include $<$avatar\+\_\+image.\+h$>$}
+
+Inheritance diagram for gxde::Avatar\+Image:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgxde_1_1AvatarImage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgxde_1_1AvatarImage_a42b1597930effad56dc16d1abb286377}\label{classgxde_1_1AvatarImage_a42b1597930effad56dc16d1abb286377} 
+void {\bfseries source\+Changed} ()
+\item 
+\Hypertarget{classgxde_1_1AvatarImage_a970b0e19908ede1598429f9811a61d03}\label{classgxde_1_1AvatarImage_a970b0e19908ede1598429f9811a61d03} 
+void {\bfseries selected\+Changed} ()
+\item 
+\Hypertarget{classgxde_1_1AvatarImage_a999b84c2ef0c696905f65b40176fb407}\label{classgxde_1_1AvatarImage_a999b84c2ef0c696905f65b40176fb407} 
+void {\bfseries ring\+Width\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classgxde_1_1AvatarImage_a0af80388b79fbad63da837bdab2995d8}{Avatar\+Image}} (QQuick\+Item \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the item. \end{DoxyCompactList}\item 
+QUrl \doxymbox{\hyperlink{classgxde_1_1AvatarImage_aa9b530c629c9a6b5ae91d583347d60be}{Source}} () const
+\begin{DoxyCompactList}\small\item\em Returns the picture to paint. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classgxde_1_1AvatarImage_adca8c9c49ad5878e21c7325c9fa662f0}{Set\+Source}} (const QUrl \&source)
+\begin{DoxyCompactList}\small\item\em Sets the picture to paint and loads it. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classgxde_1_1AvatarImage_aab99000d8f47cfb52c7c292ad00f2357}{Is\+Selected}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the white selection ring is shown. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classgxde_1_1AvatarImage_abb39ea613f80e944a352394b7490cb5a}{Set\+Selected}} (bool selected)
+\begin{DoxyCompactList}\small\item\em Shows or hides the white selection ring. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classgxde_1_1AvatarImage_a7918843ab9d73ef5989130bb66964e64}{Ring\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the visible width of the selection ring. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classgxde_1_1AvatarImage_abc26881422b3632d27801c86232f5b7a}{Set\+Ring\+Width}} (int width)
+\begin{DoxyCompactList}\small\item\em Sets the visible width of the selection ring. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classgxde_1_1AvatarImage_a426a5b392702b7b22bd5f1a95d612c7e}{paint}} (QPainter \texorpdfstring{$\ast$}{*}painter) override
+\begin{DoxyCompactList}\small\item\em Paints the clipped picture and the ring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classgxde_1_1AvatarImage_af31f1532eb9a7de444328f8eb16d2bd2}{geometry\+Change}} (const QRectF \&new\+\_\+geometry, const QRectF \&old\+\_\+geometry) override
+\begin{DoxyCompactList}\small\item\em Drops the scaled picture when the size changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classgxde_1_1AvatarImage_ade7d26adf35bda9555a195ebaa013d69}\label{classgxde_1_1AvatarImage_ade7d26adf35bda9555a195ebaa013d69} 
+QML\+\_\+\+ELEMENTQUrl {\bfseries source}
+\item 
+\Hypertarget{classgxde_1_1AvatarImage_ac7d67949f3983695b28fbba1c0d12545}\label{classgxde_1_1AvatarImage_ac7d67949f3983695b28fbba1c0d12545} 
+bool {\bfseries selected}
+\item 
+\Hypertarget{classgxde_1_1AvatarImage_a27d863c9f160aa630dba555ea5440408}\label{classgxde_1_1AvatarImage_a27d863c9f160aa630dba555ea5440408} 
+int {\bfseries ring\+Width}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Paints a picture in a circle, like DTK\textquotesingle{}s Avatar\+Widget. 
+
+It uses QPainter, so it looks the same on every scene graph backend, also the software one. 
+
+\label{classgxde_1_1AvatarImage_doc-constructors}
+\Hypertarget{classgxde_1_1AvatarImage_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgxde_1_1AvatarImage_a0af80388b79fbad63da837bdab2995d8}\index{gxde::AvatarImage@{gxde::AvatarImage}!AvatarImage@{AvatarImage}}
+\index{AvatarImage@{AvatarImage}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{AvatarImage()}{AvatarImage()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_a0af80388b79fbad63da837bdab2995d8} 
+gxde::\+\+Avatar\+Image::\+\+Avatar\+Image (\begin{DoxyParamCaption}\item[{QQuick\+Item \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs the item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The optional parent item. \\
+\hline
+\end{DoxyParams}
+
+
+\label{classgxde_1_1AvatarImage_doc-func-members}
+\Hypertarget{classgxde_1_1AvatarImage_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgxde_1_1AvatarImage_af31f1532eb9a7de444328f8eb16d2bd2}\index{gxde::AvatarImage@{gxde::AvatarImage}!geometryChange@{geometryChange}}
+\index{geometryChange@{geometryChange}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{geometryChange()}{geometryChange()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_af31f1532eb9a7de444328f8eb16d2bd2} 
+void gxde::\+\+Avatar\+Image::\+geometry\+Change (\begin{DoxyParamCaption}\item[{const QRectF \&}]{new\+\_\+geometry}{, }\item[{const QRectF \&}]{old\+\_\+geometry}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Drops the scaled picture when the size changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+geometry} & New geometry of the item. \\
+\hline
+{\em old\+\_\+geometry} & Old geometry of the item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgxde_1_1AvatarImage_aab99000d8f47cfb52c7c292ad00f2357}\index{gxde::AvatarImage@{gxde::AvatarImage}!IsSelected@{IsSelected}}
+\index{IsSelected@{IsSelected}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{IsSelected()}{IsSelected()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_aab99000d8f47cfb52c7c292ad00f2357} 
+bool gxde::\+\+Avatar\+Image::\+\+Is\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns whether the white selection ring is shown. 
+
+\begin{DoxyReturn}{Returns}
+True when selected. 
+\end{DoxyReturn}
+\Hypertarget{classgxde_1_1AvatarImage_a426a5b392702b7b22bd5f1a95d612c7e}\index{gxde::AvatarImage@{gxde::AvatarImage}!paint@{paint}}
+\index{paint@{paint}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_a426a5b392702b7b22bd5f1a95d612c7e} 
+void gxde::\+\+Avatar\+Image::\+paint (\begin{DoxyParamCaption}\item[{QPainter \texorpdfstring{$\ast$}{*}}]{painter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Paints the clipped picture and the ring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em painter} & Painter of the item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgxde_1_1AvatarImage_a7918843ab9d73ef5989130bb66964e64}\index{gxde::AvatarImage@{gxde::AvatarImage}!RingWidth@{RingWidth}}
+\index{RingWidth@{RingWidth}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{RingWidth()}{RingWidth()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_a7918843ab9d73ef5989130bb66964e64} 
+int gxde::\+\+Avatar\+Image::\+\+Ring\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns the visible width of the selection ring. 
+
+\begin{DoxyReturn}{Returns}
+Width in logical pixels. 
+\end{DoxyReturn}
+\Hypertarget{classgxde_1_1AvatarImage_abc26881422b3632d27801c86232f5b7a}\index{gxde::AvatarImage@{gxde::AvatarImage}!SetRingWidth@{SetRingWidth}}
+\index{SetRingWidth@{SetRingWidth}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{SetRingWidth()}{SetRingWidth()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_abc26881422b3632d27801c86232f5b7a} 
+void gxde::\+\+Avatar\+Image::\+\+Set\+Ring\+Width (\begin{DoxyParamCaption}\item[{int}]{width}{}\end{DoxyParamCaption})}
+
+
+
+Sets the visible width of the selection ring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width in logical pixels. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgxde_1_1AvatarImage_abb39ea613f80e944a352394b7490cb5a}\index{gxde::AvatarImage@{gxde::AvatarImage}!SetSelected@{SetSelected}}
+\index{SetSelected@{SetSelected}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{SetSelected()}{SetSelected()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_abb39ea613f80e944a352394b7490cb5a} 
+void gxde::\+\+Avatar\+Image::\+\+Set\+Selected (\begin{DoxyParamCaption}\item[{bool}]{selected}{}\end{DoxyParamCaption})}
+
+
+
+Shows or hides the white selection ring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected} & True to show the ring. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgxde_1_1AvatarImage_adca8c9c49ad5878e21c7325c9fa662f0}\index{gxde::AvatarImage@{gxde::AvatarImage}!SetSource@{SetSource}}
+\index{SetSource@{SetSource}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{SetSource()}{SetSource()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_adca8c9c49ad5878e21c7325c9fa662f0} 
+void gxde::\+\+Avatar\+Image::\+\+Set\+Source (\begin{DoxyParamCaption}\item[{const QUrl \&}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Sets the picture to paint and loads it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & A local file or Qt resource URL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgxde_1_1AvatarImage_aa9b530c629c9a6b5ae91d583347d60be}\index{gxde::AvatarImage@{gxde::AvatarImage}!Source@{Source}}
+\index{Source@{Source}!gxde::AvatarImage@{gxde::AvatarImage}}
+\doxysubsubsection{\texorpdfstring{Source()}{Source()}}
+{\footnotesize\ttfamily \label{classgxde_1_1AvatarImage_aa9b530c629c9a6b5ae91d583347d60be} 
+QUrl gxde::\+\+Avatar\+Image::\+\+Source (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Returns the picture to paint. 
+
+\begin{DoxyReturn}{Returns}
+A local file or Qt resource URL. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\+style/\+avatar\+\_\+image/avatar\+\_\+image.\+h\item 
+src/\+style/\+avatar\+\_\+image/avatar\+\_\+image.\+cc\end{DoxyCompactItemize}

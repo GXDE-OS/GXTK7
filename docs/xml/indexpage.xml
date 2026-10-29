@@ -21,7 +21,7 @@
 <para></para>
 <para> </para>
 <para> GXDE&apos;s Qt Quick UI plugin &amp; component library. <linebreak/>
- <ulink url="./docs/"><bold>Explore the docs »</bold></ulink> <linebreak/>
+ <ulink url="./docs/html/"><bold>Explore the docs »</bold></ulink> <linebreak/>
  <linebreak/>
  <ulink url="https://github.com/GXDE-OS/GXTK7/actions">View CI Status</ulink> <middot/> <ulink url="https://github.com/GXDE-OS/GXTK7/issues/new">Report Bug</ulink> <middot/> <ulink url="https://github.com/GXDE-OS/GXTK7/issues/new">Request Feature</ulink> </para>
 <para> </para>
@@ -69,31 +69,36 @@
 </programlisting></para>
 <para>This produces <computeroutput>qml6-module-qtquick-controls-gxde</computeroutput>, which installs the <computeroutput>QtQuick.Controls.Gxde</computeroutput> module into the system Qt QML directory.</para>
 </sect4>
+<sect4 id="index_1autotoc_md7">
+<title>Build an Arch Linux Package</title><para>Build and install the package from the <computeroutput>arch</computeroutput> directory of the checkout: <programlisting filename=".sh"><codeline><highlight class="normal">$<sp/>cd<sp/>arch</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>makepkg<sp/>-si</highlight></codeline>
+</programlisting></para>
+</sect4>
 </sect3>
 </sect2></sect1>
-<sect1 id="index_1autotoc_md7_1s1"><sect2 id="index_1autotoc_md7">
+<sect1 id="index_1autotoc_md8_1s1"><sect2 id="index_1autotoc_md8">
 <title>Usage</title><para>Select the style by its full module name, either in C++: <programlisting filename=".cpp"><codeline><highlight class="normal">QQuickStyle::setStyle(</highlight><highlight class="stringliteral">&quot;QtQuick.Controls.Gxde&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting> or through the environment: <programlisting filename=".sh"><codeline><highlight class="normal">$<sp/>QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde<sp/>./your_app</highlight></codeline>
 </programlisting></para>
 <para>The <computeroutput>GxdeTheme</computeroutput> singleton (<computeroutput>import QtQuick.Controls.Gxde</computeroutput>) switches between the light and dark schemes through its <computeroutput>isDark</computeroutput> property.</para>
 <para>For more, please refer to the <ulink url="./examples/gallery/">widget gallery example</ulink> and the <ulink url="./docs/">documentation</ulink>.</para>
 </sect2></sect1>
-<sect1 id="index_1autotoc_md8_1s1"><sect2 id="index_1autotoc_md8">
+<sect1 id="index_1autotoc_md9_1s1"><sect2 id="index_1autotoc_md9">
 <title>Roadmap</title><para><itemizedlist>
 <listitem override="checked"><para>To provide basic QtQuick style.</para>
 </listitem></itemizedlist>
 </para>
 </sect2></sect1>
-<sect1 id="index_1autotoc_md9_1s1"><sect2 id="index_1autotoc_md9">
-<title>Contributing</title><sect3 id="index_1autotoc_md10">
+<sect1 id="index_1autotoc_md10_1s1"><sect2 id="index_1autotoc_md10">
+<title>Contributing</title><sect3 id="index_1autotoc_md11">
 <title>Top contributors:</title><para><ulink url="https://github.com/GXDE-OS/GXTK7/graphs/contributors"><image type="html" name="https://contrib.rocks/image?repo=GXDE-OS/GXTK7" alt="contrib.rocks image" inline="yes"></image>
  </ulink></para>
 </sect3>
 </sect2></sect1>
-<sect1 id="index_1autotoc_md11_1s1"><sect2 id="index_1autotoc_md11">
+<sect1 id="index_1autotoc_md12_1s1"><sect2 id="index_1autotoc_md12">
 <title>License</title><para>GXTK7 is distributed under GNU GENERAL PUBLIC LICENSE Version 3. You may find a copy of the license <ulink url="./LICENSE">here</ulink>.</para>
 </sect2></sect1>
-<sect1 id="index_1autotoc_md12_1s1"><sect2 id="index_1autotoc_md12">
+<sect1 id="index_1autotoc_md13_1s1"><sect2 id="index_1autotoc_md13">
 <title>Acknowledgments</title><para><itemizedlist>
 <listitem><para><bold>DTK2Widget-Qt6</bold>: <ulink url="https://github.com/GXDE-OS/dtk2widget-qt6">https://github.com/GXDE-OS/dtk2widget-qt6</ulink></para>
 </listitem><listitem><para><bold>BEST-README-Template</bold>: <ulink url="https://github.com/othneildrew/Best-README-Template">https://github.com/othneildrew/Best-README-Template</ulink> </para>

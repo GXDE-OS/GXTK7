@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="classgxde_1_1AvatarImage" kind="class"><name>gxde::AvatarImage</name>
+    <member refid="classgxde_1_1AvatarImage_1ade7d26adf35bda9555a195ebaa013d69" kind="property"><name>source</name></member>
+    <member refid="classgxde_1_1AvatarImage_1ac7d67949f3983695b28fbba1c0d12545" kind="property"><name>selected</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a27d863c9f160aa630dba555ea5440408" kind="property"><name>ringWidth</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a51c3e85af802d42a7c003cb83a249dfb" kind="variable"><name>source_</name></member>
+    <member refid="classgxde_1_1AvatarImage_1ae808e2d38561886564b13d0123625d0b" kind="variable"><name>image_</name></member>
+    <member refid="classgxde_1_1AvatarImage_1af8283469662e218d527d66dbb27a1091" kind="variable"><name>scaled_</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a2f02a302d0fca698bc0ec0e0172ec121" kind="variable"><name>selected_</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a22d3a0954acf028348cd0d2325baef50" kind="variable"><name>ring_width_</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a0af80388b79fbad63da837bdab2995d8" kind="function"><name>AvatarImage</name></member>
+    <member refid="classgxde_1_1AvatarImage_1aa9b530c629c9a6b5ae91d583347d60be" kind="function"><name>Source</name></member>
+    <member refid="classgxde_1_1AvatarImage_1adca8c9c49ad5878e21c7325c9fa662f0" kind="function"><name>SetSource</name></member>
+    <member refid="classgxde_1_1AvatarImage_1aab99000d8f47cfb52c7c292ad00f2357" kind="function"><name>IsSelected</name></member>
+    <member refid="classgxde_1_1AvatarImage_1abb39ea613f80e944a352394b7490cb5a" kind="function"><name>SetSelected</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a7918843ab9d73ef5989130bb66964e64" kind="function"><name>RingWidth</name></member>
+    <member refid="classgxde_1_1AvatarImage_1abc26881422b3632d27801c86232f5b7a" kind="function"><name>SetRingWidth</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a426a5b392702b7b22bd5f1a95d612c7e" kind="function"><name>paint</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a42b1597930effad56dc16d1abb286377" kind="signal"><name>sourceChanged</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a970b0e19908ede1598429f9811a61d03" kind="signal"><name>selectedChanged</name></member>
+    <member refid="classgxde_1_1AvatarImage_1a999b84c2ef0c696905f65b40176fb407" kind="signal"><name>ringWidthChanged</name></member>
+    <member refid="classgxde_1_1AvatarImage_1af31f1532eb9a7de444328f8eb16d2bd2" kind="function"><name>geometryChange</name></member>
+  </compound>
   <compound refid="classgxde_1_1GxdeTheme" kind="class"><name>gxde::GxdeTheme</name>
     <member refid="classgxde_1_1GxdeTheme_1a38fd58e0e4d32c8c77150b1708e2c7fc" kind="property"><name>isDark</name></member>
     <member refid="classgxde_1_1GxdeTheme_1abd4ad20bb64ba34f08b4d05a939bee62" kind="variable"><name>is_dark_</name></member>
@@ -13,11 +35,19 @@
   </compound>
   <compound refid="namespacegxde" kind="namespace"><name>gxde</name>
   </compound>
+  <compound refid="namespacegxde_1_1_0d346012240116133103231056344360027362141004371000" kind="namespace"><name>gxde::@346012240116133103231056344360027362141004371000</name>
+  </compound>
   <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="avatar__image_8cc" kind="file"><name>avatar_image.cc</name>
+  </compound>
+  <compound refid="avatar__image_8h" kind="file"><name>avatar_image.h</name>
   </compound>
   <compound refid="gxde__theme_8cc" kind="file"><name>gxde_theme.cc</name>
   </compound>
   <compound refid="gxde__theme_8h" kind="file"><name>gxde_theme.h</name>
+  </compound>
+  <compound refid="dir_a369d88d74289cda247644226e70049e" kind="dir"><name>src/style/avatar_image</name>
   </compound>
   <compound refid="dir_14de577f6d3be4d7baf03e43b10d4d60" kind="dir"><name>src/style/gxde_theme</name>
   </compound>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['create_0',['create',['../classgxde_1_1GxdeTheme.html#abc5ef74a8d2dd1eddc8fa985e68d4935',1,'gxde::GxdeTheme']]]
+  ['avatarimage_0',['AvatarImage',['../classgxde_1_1AvatarImage.html#a0af80388b79fbad63da837bdab2995d8',1,'gxde::AvatarImage']]]
 ];

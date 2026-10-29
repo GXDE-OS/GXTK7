@@ -1,0 +1,197 @@
+.TH "gxde::AvatarImage" 3 "Version 0.1.0" "GXTK7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gxde::AvatarImage \- Paints a picture in a circle, like DTK's AvatarWidget\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <avatar_image\&.h>\fP
+.PP
+Inherits QQuickPaintedItem\&.
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBsourceChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBselectedChanged\fP ()"
+.br
+.ti -1c
+.RI "void \fBringWidthChanged\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAvatarImage\fP (QQuickItem *parent=nullptr)"
+.br
+.RI "Constructs the item\&. "
+.ti -1c
+.RI "QUrl \fBSource\fP () const"
+.br
+.RI "Returns the picture to paint\&. "
+.ti -1c
+.RI "void \fBSetSource\fP (const QUrl &source)"
+.br
+.RI "Sets the picture to paint and loads it\&. "
+.ti -1c
+.RI "bool \fBIsSelected\fP () const"
+.br
+.RI "Returns whether the white selection ring is shown\&. "
+.ti -1c
+.RI "void \fBSetSelected\fP (bool selected)"
+.br
+.RI "Shows or hides the white selection ring\&. "
+.ti -1c
+.RI "int \fBRingWidth\fP () const"
+.br
+.RI "Returns the visible width of the selection ring\&. "
+.ti -1c
+.RI "void \fBSetRingWidth\fP (int width)"
+.br
+.RI "Sets the visible width of the selection ring\&. "
+.ti -1c
+.RI "void \fBpaint\fP (QPainter *painter) override"
+.br
+.RI "Paints the clipped picture and the ring\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBgeometryChange\fP (const QRectF &new_geometry, const QRectF &old_geometry) override"
+.br
+.RI "Drops the scaled picture when the size changes\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "QML_ELEMENTQUrl \fBsource\fP"
+.br
+.ti -1c
+.RI "bool \fBselected\fP"
+.br
+.ti -1c
+.RI "int \fBringWidth\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Paints a picture in a circle, like DTK's AvatarWidget\&. 
+
+It uses QPainter, so it looks the same on every scene graph backend, also the software one\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "gxde::AvatarImage::AvatarImage (QQuickItem * parent = \fRnullptr\fP)\fR [explicit]\fP"
+
+.PP
+Constructs the item\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP The optional parent item\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void gxde::AvatarImage::geometryChange (const QRectF & new_geometry, const QRectF & old_geometry)\fR [override]\fP, \fR [protected]\fP"
+
+.PP
+Drops the scaled picture when the size changes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInew_geometry\fP New geometry of the item\&. 
+.br
+\fIold_geometry\fP Old geometry of the item\&. 
+.RE
+.PP
+
+.SS "bool gxde::AvatarImage::IsSelected () const\fR [nodiscard]\fP"
+
+.PP
+Returns whether the white selection ring is shown\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True when selected\&. 
+.RE
+.PP
+
+.SS "void gxde::AvatarImage::paint (QPainter * painter)\fR [override]\fP"
+
+.PP
+Paints the clipped picture and the ring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpainter\fP Painter of the item\&. 
+.RE
+.PP
+
+.SS "int gxde::AvatarImage::RingWidth () const\fR [nodiscard]\fP"
+
+.PP
+Returns the visible width of the selection ring\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Width in logical pixels\&. 
+.RE
+.PP
+
+.SS "void gxde::AvatarImage::SetRingWidth (int width)"
+
+.PP
+Sets the visible width of the selection ring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwidth\fP Width in logical pixels\&. 
+.RE
+.PP
+
+.SS "void gxde::AvatarImage::SetSelected (bool selected)"
+
+.PP
+Shows or hides the white selection ring\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIselected\fP True to show the ring\&. 
+.RE
+.PP
+
+.SS "void gxde::AvatarImage::SetSource (const QUrl & source)"
+
+.PP
+Sets the picture to paint and loads it\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsource\fP A local file or Qt resource URL\&. 
+.RE
+.PP
+
+.SS "QUrl gxde::AvatarImage::Source () const\fR [nodiscard]\fP"
+
+.PP
+Returns the picture to paint\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A local file or Qt resource URL\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GXTK7 from the source code\&.

@@ -49,7 +49,7 @@
 <codeline><highlight class="normal"><sp/><sp/>&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>GXDE&apos;s<sp/>Qt<sp/>Quick<sp/>UI<sp/>plugin<sp/>&amp;<sp/>component<sp/>library.</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;./docs/&quot;&gt;&lt;strong&gt;Explore<sp/>the<sp/>docs<sp/>»&lt;/strong&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;./docs/html/&quot;&gt;&lt;strong&gt;Explore<sp/>the<sp/>docs<sp/>»&lt;/strong&gt;&lt;/a&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/GXDE-OS/GXTK7/actions&quot;&gt;View<sp/>CI<sp/>Status&lt;/a&gt;</highlight></codeline>
@@ -111,6 +111,13 @@
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">This<sp/>produces<sp/>`qml6-module-qtquick-controls-gxde`,<sp/>which<sp/>installs<sp/>the<sp/>`QtQuick.Controls.Gxde`<sp/>module<sp/>into<sp/>the<sp/>system<sp/>Qt<sp/>QML<sp/>directory.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Build<sp/>an<sp/>Arch<sp/>Linux<sp/>Package</highlight></codeline>
+<codeline><highlight class="normal">Build<sp/>and<sp/>install<sp/>the<sp/>package<sp/>from<sp/>the<sp/>`arch`<sp/>directory<sp/>of<sp/>the<sp/>checkout:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>cd<sp/>arch</highlight></codeline>
+<codeline><highlight class="normal">$<sp/>makepkg<sp/>-si</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

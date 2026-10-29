@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['roadmap_0',['Roadmap',['../index.html#autotoc_md8',1,'']]]
+  ['ringwidth_0',['RingWidth',['../classgxde_1_1AvatarImage.html#a7918843ab9d73ef5989130bb66964e64',1,'gxde::AvatarImage']]],
+  ['roadmap_1',['Roadmap',['../index.html#autotoc_md9',1,'']]]
 ];
