@@ -40,7 +40,7 @@
   <p align="center">
     GXDE's Qt Quick UI plugin & component library.
     <br />
-    <a href="./docs/"><strong>Explore the docs »</strong></a>
+    <a href="./docs/html/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/GXDE-OS/GXTK7/actions">View CI Status</a>
