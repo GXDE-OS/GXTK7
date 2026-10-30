@@ -124,7 +124,6 @@ $ QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde ./your_app
 ```
 
 The `GxdeTheme` singleton (`import QtQuick.Controls.Gxde`) switches between the light and dark schemes through its `isDark` property.
-
 For more, please refer to the [widget gallery example](./examples/gallery/) and the [documentation](./docs/).
 
 
@@ -132,6 +131,123 @@ For more, please refer to the [widget gallery example](./examples/gallery/) and 
 <!-- ROADMAP -->
 ## Roadmap
 - [X] To provide basic QtQuick style.
+
+- [ ] `GXAboutDialog`
+- [ ] `GXAbstractDialog`
+- [ ] `GXAnchorsBase`
+- [ ] `GXEnhancedWidget`
+- [ ] `GXAnchors`
+- [ ] `GXApplication`
+- [ ] `GXApplicationHelper`
+- [ ] `GXApplicationSettings`
+- [ ] `GXArrowButton`
+- [ ] `GXArrowLineExpand`
+- [ ] `GXPlatformWindowHandle`
+- [ ] `GXArrowRectangle`
+- [ ] `GXBackgroundGroup`
+- [ ] `GXBaseButton`
+- [ ] `GXBoxWidget`
+- [ ] `GXBaseExpand`
+- [ ] `GXBaseLine`
+- [ ] `GXBlurEffectWidget`
+- [ ] `GXBlurSurface`
+- [ ] `GXTitlebar`
+- [ ] `GXBorderlessWidget`
+- [ ] `GXBorderlessWindow`
+- [ ] `GXHBoxWidget`
+- [ ] `GXVBoxWidget`
+- [ ] `GXIconButton`
+- [ ] `GXButtonList`
+- [ ] `GXCardWidget`
+- [ ] `GXCheckBox`
+- [ ] `GXCircleProgress`
+- [ ] `GXClipEffectWidget`
+- [ ] `GXCommandLinkButton`
+- [ ] `GXCrumbTextFormat`
+- [ ] `GXCrumbEdit`
+- [ ] `GXDialog`
+- [ ] `GXDocumentTabBar`
+- [ ] `GXExpandGroup`
+- [ ] `GXFileChooserEdit`
+- [ ] `GXFileDialog`
+- [ ] `GXTypographyLabel`
+- [ ] `GXFloatingMessage`
+- [ ] `GXFloatingWidget`
+- [ ] `GXFlowLayout`
+- [ ] `GXForeignWindow`
+- [ ] `GXFrame`
+- [ ] `GXHorizontalLine`
+- [ ] `GXVerticalLine`
+- [ ] `GXGraphicsClipEffect`
+- [ ] `GXGraphicsGlowEffect`
+- [ ] `GXGuiApplicationHelper`
+- [ ] `GXHeaderLine`
+- [ ] `GXHoverButton`
+- [ ] `GXIconTextButton`
+- [ ] `GXImageButton`
+- [ ] `GXInputDialog`
+- [ ] `GXIpv4LineEdit`
+- [ ] `GXLabel`
+- [ ] `GXStyleOptionLineEdit`
+- [ ] `GXLineEdit`
+- [ ] `GXLinkButton`
+- [ ] `GXVariantListModel`
+- [ ] `GXListView`
+- [ ] `GXListWidget`
+- [ ] `GXLoadingIndicator`
+- [ ] `GXMainWindow`
+- [ ] `GXMainWindowBackground`
+- [ ] `GXMPRISControl`
+- [ ] `GXOption`
+- [ ] `GXOptionList`
+- [ ] `GXPageIndicator`
+- [ ] `GXPalette`
+- [ ] `GXPasswdEditAnimated`
+- [ ] `GXPasswordEdit`
+- [ ] `GXPictureSequenceView`
+- [ ] `GXPlatformTheme`
+- [ ] `GXScrollBar`
+- [ ] `GXScrollArea`
+- [ ] `GXSearchEdit`
+- [ ] `GXSegmentedHighlight`
+- [ ] `GXSegmentedControl`
+- [ ] `GXSeparatorHorizontal`
+- [ ] `GXSeparatorVertical`
+- [ ] `GXSettingsWidgetFactory`
+- [ ] `GXSettingsDialog`
+- [ ] `GXSettingsOption`
+- [ ] `GXShortcutEditLabel`
+- [ ] `GXShortcutEdit`
+- [ ] `GXSimpleListItem`
+- [ ] `GXSimpleListView`
+- [ ] `GXSlider`
+- [ ] `GXSpinBox`
+- [ ] `GXDoubleSpinBox`
+- [ ] `GXSpinner`
+- [ ] `GXStackWidget`
+- [ ] `GXAbstractStackWidgetTransition`
+- [ ] `GXSlideStackWidgetTransition`
+- [ ] `GXStyleOption`
+- [ ] `GXStyleOptionSuggestButton`
+- [ ] `GXSuggestButton`
+- [ ] `GXSwitchButton`
+- [ ] `GXSwitchHeaderLine`
+- [ ] `GXSwitchLineExpand`
+- [ ] `GXTabBar`
+- [ ] `GXTabbedStackWidget`
+- [ ] `GXTextButton`
+- [ ] `GXTextEdit`
+- [ ] `GXThemeManager`
+- [ ] `GXTickEffect`
+- [ ] `GXToast`
+- [ ] `GXSectionTitle`
+- [ ] `GXVideoWidget`
+- [ ] `GXWaterProgress`
+- [ ] `GXWindowCloseButton`
+- [ ] `GXWindowGroupLeader`
+- [ ] `GXWindowMaxButton`
+- [ ] `GXWindowMinButton`
+- [ ] `GXWindowOptionButton`
 
 
 
