@@ -33,6 +33,12 @@
     <member refid="classgxde_1_1GxdeTheme_1abc5ef74a8d2dd1eddc8fa985e68d4935" kind="function"><name>create</name></member>
     <member refid="classgxde_1_1GxdeTheme_1a6f6b86e474f7f389a9c9231507760cdd" kind="signal"><name>themeChanged</name></member>
   </compound>
+  <compound refid="classgxde_1_1WindowEffects" kind="class"><name>gxde::WindowEffects</name>
+    <member refid="classgxde_1_1WindowEffects_1ae06ee0b4ed7c09ba9e9453618ee2da25" kind="function"><name>WindowEffects</name></member>
+    <member refid="classgxde_1_1WindowEffects_1a5b9216025623b2e584d3b8a0d61c8783" kind="function"><name>isBlurSupported</name></member>
+    <member refid="classgxde_1_1WindowEffects_1a84af214cef1cf134e92ac4feb5499d93" kind="function"><name>setBlurBehind</name></member>
+    <member refid="classgxde_1_1WindowEffects_1a994ee7b8f55c69113e0abe7a45115f91" kind="function"><name>clearBlurBehind</name></member>
+  </compound>
   <compound refid="namespacegxde" kind="namespace"><name>gxde</name>
   </compound>
   <compound refid="namespacegxde_1_1_0d346012240116133103231056344360027362141004371000" kind="namespace"><name>gxde::@346012240116133103231056344360027362141004371000</name>
@@ -47,6 +53,10 @@
   </compound>
   <compound refid="gxde__theme_8h" kind="file"><name>gxde_theme.h</name>
   </compound>
+  <compound refid="window__effects_8cc" kind="file"><name>window_effects.cc</name>
+  </compound>
+  <compound refid="window__effects_8h" kind="file"><name>window_effects.h</name>
+  </compound>
   <compound refid="dir_a369d88d74289cda247644226e70049e" kind="dir"><name>src/style/avatar_image</name>
   </compound>
   <compound refid="dir_14de577f6d3be4d7baf03e43b10d4d60" kind="dir"><name>src/style/gxde_theme</name>
@@ -54,6 +64,8 @@
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>
   <compound refid="dir_ade1fb6582c957ace0eb431debfd084f" kind="dir"><name>src/style</name>
+  </compound>
+  <compound refid="dir_4f014d16929e17e5250f3f6a3505dab8" kind="dir"><name>src/style/window_effects</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

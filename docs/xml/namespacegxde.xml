@@ -4,6 +4,7 @@
     <compoundname>gxde</compoundname>
     <innerclass refid="classgxde_1_1AvatarImage" prot="public">gxde::AvatarImage</innerclass>
     <innerclass refid="classgxde_1_1GxdeTheme" prot="public">gxde::GxdeTheme</innerclass>
+    <innerclass refid="classgxde_1_1WindowEffects" prot="public">gxde::WindowEffects</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

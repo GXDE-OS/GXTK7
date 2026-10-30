@@ -19,7 +19,13 @@ var NAVTREEINDEX0 =
 "classgxde_1_1GxdeTheme.html#a6f6b86e474f7f389a9c9231507760cdd":[0,7,0,1,4],
 "classgxde_1_1GxdeTheme.html#a8e08212e6216ebe1ec9da962c28b8f39":[0,7,0,1,0],
 "classgxde_1_1GxdeTheme.html#ab38952966c7f541bf4d40ff2e212a3b6":[0,7,0,1,2],
+"classgxde_1_1WindowEffects.html":[0,7,0,2],
+"classgxde_1_1WindowEffects.html#a5b9216025623b2e584d3b8a0d61c8783":[0,7,0,2,2],
+"classgxde_1_1WindowEffects.html#a84af214cef1cf134e92ac4feb5499d93":[0,7,0,2,3],
+"classgxde_1_1WindowEffects.html#a994ee7b8f55c69113e0abe7a45115f91":[0,7,0,2,1],
+"classgxde_1_1WindowEffects.html#ae06ee0b4ed7c09ba9e9453618ee2da25":[0,7,0,2,0],
 "dir_14de577f6d3be4d7baf03e43b10d4d60.html":[1,0,0,0,1],
+"dir_4f014d16929e17e5250f3f6a3505dab8.html":[1,0,0,0,2],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,0],
 "dir_a369d88d74289cda247644226e70049e.html":[1,0,0,0,0],
 "dir_ade1fb6582c957ace0eb431debfd084f.html":[1,0,0,0],
@@ -43,5 +49,6 @@ var NAVTREEINDEX0 =
 "index.html#autotoc_md7":[1,1,2],
 "index.html#autotoc_md8":[2],
 "index.html#autotoc_md9":[3],
-"pages.html":[]
+"pages.html":[],
+"window__effects_8h_source.html":[1,0,0,0,2,0]
 };

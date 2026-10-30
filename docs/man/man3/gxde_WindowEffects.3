@@ -1,0 +1,109 @@
+.TH "gxde::WindowEffects" 3 "Version 0.1.0" "GXTK7" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gxde::WindowEffects \- Blur behind a window from QML\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <window_effects\&.h>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowEffects\fP (QObject *parent=nullptr)"
+.br
+.RI "The constructor\&. "
+.ti -1c
+.RI "Q_INVOKABLE bool \fBisBlurSupported\fP () const"
+.br
+.RI "Check if blur is supportted\&. "
+.ti -1c
+.RI "Q_INVOKABLE bool \fBsetBlurBehind\fP (QWindow *window, const QRectF &area, int radius)"
+.br
+.RI "Do a behind window blue\&. "
+.ti -1c
+.RI "Q_INVOKABLE bool \fBclearBlurBehind\fP (QWindow *window)"
+.br
+.RI "Removes the blur from a window\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Blur behind a window from QML\&. 
+
+The underlying work is handled by GXDE Bernese\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "gxde::WindowEffects::WindowEffects (QObject * parent = \fRnullptr\fP)\fR [explicit]\fP"
+
+.PP
+The constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparent\fP The optional QObject parent\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool gxde::WindowEffects::clearBlurBehind (QWindow * window)"
+
+.PP
+Removes the blur from a window\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP The window, may be null\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True when the blur was removed\&. 
+.RE
+.PP
+
+.SS "bool gxde::WindowEffects::isBlurSupported () const"
+
+.PP
+Check if blur is supportted\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True when blur works\&. 
+.RE
+.PP
+
+.SS "bool gxde::WindowEffects::setBlurBehind (QWindow * window, const QRectF & area, int radius)"
+
+.PP
+Do a behind window blue\&. 
+.PP
+\fBNote\fP
+.RS 4
+On Wayland, call this again after each show\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP The window, may be null\&. 
+.br
+\fIarea\fP Area in logical pixels in the window\&. 
+.br
+\fIradius\fP Corner radius of the area in logical pixels\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True when the blur was sent\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GXTK7 from the source code\&.

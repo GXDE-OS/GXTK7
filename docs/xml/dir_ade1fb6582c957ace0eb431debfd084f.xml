@@ -4,6 +4,7 @@
     <compoundname>src/style</compoundname>
     <innerdir refid="dir_a369d88d74289cda247644226e70049e">src/style/avatar_image</innerdir>
     <innerdir refid="dir_14de577f6d3be4d7baf03e43b10d4d60">src/style/gxde_theme</innerdir>
+    <innerdir refid="dir_4f014d16929e17e5250f3f6a3505dab8">src/style/window_effects</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

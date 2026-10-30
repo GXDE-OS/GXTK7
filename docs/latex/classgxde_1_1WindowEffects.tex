@@ -1,0 +1,120 @@
+\doxysection{gxde::Window\+Effects Class Reference}
+\hypertarget{classgxde_1_1WindowEffects}{}\label{classgxde_1_1WindowEffects}\index{gxde::WindowEffects@{gxde::WindowEffects}}
+
+
+Blur behind a window from QML.  
+
+
+
+
+{\ttfamily \+\#include $<$window\+\_\+effects.\+h$>$}
+
+Inheritance diagram for gxde::Window\+Effects:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgxde_1_1WindowEffects}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classgxde_1_1WindowEffects_ae06ee0b4ed7c09ba9e9453618ee2da25}{Window\+Effects}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{classgxde_1_1WindowEffects_a5b9216025623b2e584d3b8a0d61c8783}{is\+Blur\+Supported}} () const
+\begin{DoxyCompactList}\small\item\em Check if blur is supportted. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{classgxde_1_1WindowEffects_a84af214cef1cf134e92ac4feb5499d93}{set\+Blur\+Behind}} (QWindow \texorpdfstring{$\ast$}{*}window, const QRectF \&area, int radius)
+\begin{DoxyCompactList}\small\item\em Do a behind window blue. \end{DoxyCompactList}\item 
+Q\+\_\+\+INVOKABLE bool \doxymbox{\hyperlink{classgxde_1_1WindowEffects_a994ee7b8f55c69113e0abe7a45115f91}{clear\+Blur\+Behind}} (QWindow \texorpdfstring{$\ast$}{*}window)
+\begin{DoxyCompactList}\small\item\em Removes the blur from a window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Blur behind a window from QML. 
+
+The underlying work is handled by GXDE Bernese. 
+
+\label{classgxde_1_1WindowEffects_doc-constructors}
+\Hypertarget{classgxde_1_1WindowEffects_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgxde_1_1WindowEffects_ae06ee0b4ed7c09ba9e9453618ee2da25}\index{gxde::WindowEffects@{gxde::WindowEffects}!WindowEffects@{WindowEffects}}
+\index{WindowEffects@{WindowEffects}!gxde::WindowEffects@{gxde::WindowEffects}}
+\doxysubsubsection{\texorpdfstring{WindowEffects()}{WindowEffects()}}
+{\footnotesize\ttfamily \label{classgxde_1_1WindowEffects_ae06ee0b4ed7c09ba9e9453618ee2da25} 
+gxde::\+\+Window\+Effects::\+\+Window\+Effects (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The optional QObject parent. \\
+\hline
+\end{DoxyParams}
+
+
+\label{classgxde_1_1WindowEffects_doc-func-members}
+\Hypertarget{classgxde_1_1WindowEffects_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgxde_1_1WindowEffects_a994ee7b8f55c69113e0abe7a45115f91}\index{gxde::WindowEffects@{gxde::WindowEffects}!clearBlurBehind@{clearBlurBehind}}
+\index{clearBlurBehind@{clearBlurBehind}!gxde::WindowEffects@{gxde::WindowEffects}}
+\doxysubsubsection{\texorpdfstring{clearBlurBehind()}{clearBlurBehind()}}
+{\footnotesize\ttfamily \label{classgxde_1_1WindowEffects_a994ee7b8f55c69113e0abe7a45115f91} 
+bool gxde::\+\+Window\+Effects::\+clear\+Blur\+Behind (\begin{DoxyParamCaption}\item[{QWindow \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+
+
+Removes the blur from a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window, may be null. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True when the blur was removed. 
+\end{DoxyReturn}
+\Hypertarget{classgxde_1_1WindowEffects_a5b9216025623b2e584d3b8a0d61c8783}\index{gxde::WindowEffects@{gxde::WindowEffects}!isBlurSupported@{isBlurSupported}}
+\index{isBlurSupported@{isBlurSupported}!gxde::WindowEffects@{gxde::WindowEffects}}
+\doxysubsubsection{\texorpdfstring{isBlurSupported()}{isBlurSupported()}}
+{\footnotesize\ttfamily \label{classgxde_1_1WindowEffects_a5b9216025623b2e584d3b8a0d61c8783} 
+bool gxde::\+\+Window\+Effects::\+is\+Blur\+Supported (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if blur is supportted. 
+
+\begin{DoxyReturn}{Returns}
+True when blur works. 
+\end{DoxyReturn}
+\Hypertarget{classgxde_1_1WindowEffects_a84af214cef1cf134e92ac4feb5499d93}\index{gxde::WindowEffects@{gxde::WindowEffects}!setBlurBehind@{setBlurBehind}}
+\index{setBlurBehind@{setBlurBehind}!gxde::WindowEffects@{gxde::WindowEffects}}
+\doxysubsubsection{\texorpdfstring{setBlurBehind()}{setBlurBehind()}}
+{\footnotesize\ttfamily \label{classgxde_1_1WindowEffects_a84af214cef1cf134e92ac4feb5499d93} 
+bool gxde::\+\+Window\+Effects::\+set\+Blur\+Behind (\begin{DoxyParamCaption}\item[{QWindow \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{const QRectF \&}]{area}{, }\item[{int}]{radius}{}\end{DoxyParamCaption})}
+
+
+
+Do a behind window blue. 
+
+\begin{DoxyNote}{Note}
+On Wayland, call this again after each show. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window, may be null. \\
+\hline
+{\em area} & Area in logical pixels in the window. \\
+\hline
+{\em radius} & Corner radius of the area in logical pixels. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True when the blur was sent. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\+style/\+window\+\_\+effects/window\+\_\+effects.\+h\item 
+src/\+style/\+window\+\_\+effects/window\+\_\+effects.\+cc\end{DoxyCompactItemize}

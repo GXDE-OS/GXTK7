@@ -80,12 +80,357 @@
 <title>Usage</title><para>Select the style by its full module name, either in C++: <programlisting filename=".cpp"><codeline><highlight class="normal">QQuickStyle::setStyle(</highlight><highlight class="stringliteral">&quot;QtQuick.Controls.Gxde&quot;</highlight><highlight class="normal">);</highlight></codeline>
 </programlisting> or through the environment: <programlisting filename=".sh"><codeline><highlight class="normal">$<sp/>QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde<sp/>./your_app</highlight></codeline>
 </programlisting></para>
-<para>The <computeroutput>GxdeTheme</computeroutput> singleton (<computeroutput>import QtQuick.Controls.Gxde</computeroutput>) switches between the light and dark schemes through its <computeroutput>isDark</computeroutput> property.</para>
-<para>For more, please refer to the <ulink url="./examples/gallery/">widget gallery example</ulink> and the <ulink url="./docs/">documentation</ulink>.</para>
+<para>The <computeroutput>GxdeTheme</computeroutput> singleton (<computeroutput>import QtQuick.Controls.Gxde</computeroutput>) switches between the light and dark schemes through its <computeroutput>isDark</computeroutput> property. For more, please refer to the <ulink url="./examples/gallery/">widget gallery example</ulink> and the <ulink url="./docs/">documentation</ulink>.</para>
 </sect2></sect1>
 <sect1 id="index_1autotoc_md9_1s1"><sect2 id="index_1autotoc_md9">
 <title>Roadmap</title><para><itemizedlist>
 <listitem override="checked"><para>To provide basic QtQuick style.</para>
+</listitem><listitem override="unchecked"><para><computeroutput>GXAboutDialog</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXAbstractDialog</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXAnchorsBase</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXEnhancedWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXAnchors</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXApplication</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXApplicationHelper</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXApplicationSettings</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXArrowButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXArrowLineExpand</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPlatformWindowHandle</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXArrowRectangle</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBackgroundGroup</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBaseButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBoxWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBaseExpand</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBaseLine</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBlurEffectWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBlurSurface</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTitlebar</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBorderlessWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXBorderlessWindow</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXHBoxWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXVBoxWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXIconButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXButtonList</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXCardWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXCheckBox</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXCircleProgress</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXClipEffectWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXCommandLinkButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXCrumbTextFormat</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXCrumbEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXDialog</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXDocumentTabBar</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXExpandGroup</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXFileChooserEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXFileDialog</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTypographyLabel</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXFloatingMessage</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXFloatingWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXFlowLayout</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXForeignWindow</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXFrame</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXHorizontalLine</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXVerticalLine</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXGraphicsClipEffect</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXGraphicsGlowEffect</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXGuiApplicationHelper</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXHeaderLine</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXHoverButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXIconTextButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXImageButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXInputDialog</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXIpv4LineEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXLabel</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXStyleOptionLineEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXLineEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXLinkButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXVariantListModel</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXListView</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXListWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXLoadingIndicator</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXMainWindow</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXMainWindowBackground</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXMPRISControl</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXOption</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXOptionList</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPageIndicator</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPalette</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPasswdEditAnimated</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPasswordEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPictureSequenceView</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXPlatformTheme</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXScrollBar</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXScrollArea</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSearchEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSegmentedHighlight</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSegmentedControl</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSeparatorHorizontal</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSeparatorVertical</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSettingsWidgetFactory</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSettingsDialog</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSettingsOption</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXShortcutEditLabel</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXShortcutEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSimpleListItem</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSimpleListView</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSlider</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSpinBox</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXDoubleSpinBox</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSpinner</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXStackWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXAbstractStackWidgetTransition</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSlideStackWidgetTransition</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXStyleOption</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXStyleOptionSuggestButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSuggestButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSwitchButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSwitchHeaderLine</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSwitchLineExpand</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTabBar</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTabbedStackWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTextButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTextEdit</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXThemeManager</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXTickEffect</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXToast</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXSectionTitle</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXVideoWidget</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXWaterProgress</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXWindowCloseButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXWindowGroupLeader</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXWindowMaxButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXWindowMinButton</computeroutput></para>
+</listitem></itemizedlist>
+<itemizedlist>
+<listitem override="unchecked"><para><computeroutput>GXWindowOptionButton</computeroutput></para>
 </listitem></itemizedlist>
 </para>
 </sect2></sect1>
