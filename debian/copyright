@@ -13,6 +13,21 @@ License: GPL-3+
 Comment: Copied from the dstyleplugin-qt6 assets of gxde-qt6-integration
  (https://github.com/GXDE-OS/gxde-qt6-integration).
 
+Files: src/style/qml/gxde/assets/common/back.png
+       src/style/qml/gxde/assets/common/back@2x.png
+       examples/control_center/icons/*
+Copyright: 2015 Deepin Technology Co., Ltd.
+License: GPL-3+
+Comment: Copied from gxde-control-center
+ (https://github.com/GXDE-OS/gxde-control-center).
+
+Files: src/style/qml/gxde/assets/dark/window/*
+       src/style/qml/gxde/assets/light/window/*
+Copyright: 2017 Deepin Technology Co., Ltd.
+License: GPL-3+
+Comment: Copied from the window button pictures of dtk2widget-qt6
+ (https://gitee.com/GXDE-OS/dtk2widget-qt6).
+
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
