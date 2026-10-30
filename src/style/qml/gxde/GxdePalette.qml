@@ -103,6 +103,13 @@ QtObject {
   readonly property color dialogActionText: dark ? "#d0d0d0" : "#303030"
   readonly property color dialogRecommendText: dark ? "#4cc2ff" : "#0087ff"
 
+  readonly property color settingsTile: dark ? Qt.rgba(1, 1, 1, 0.06) : Qt.rgba(0, 0, 0, 0.04)
+  readonly property color settingsTileHover: dark ? Qt.rgba(1, 1, 1, 0.14) : Qt.rgba(0, 0, 0, 0.08)
+  readonly property color settingsTilePress: dark ? Qt.rgba(1, 1, 1, 0.2) : Qt.rgba(0, 0, 0, 0.12)
+  readonly property color settingsNav: dark ? Qt.rgba(1, 1, 1, 0.04) : Qt.rgba(0, 0, 0, 0.03)
+  readonly property color settingsNavHover: dark ? Qt.rgba(1, 1, 1, 0.1) : Qt.rgba(0, 0, 0, 0.06)
+  readonly property color settingsNavSelected: dark ? Qt.rgba(1, 1, 1, 0.18) : Qt.rgba(0, 0, 0, 0.1)
+
   readonly property color titlebarTop: dark ? Qt.rgba(28 / 255, 29 / 255, 32 / 255, 0.7) : Qt.rgba(1, 1, 1, 0.72)
   readonly property color titlebarBottom: dark ? Qt.rgba(22 / 255, 23 / 255, 26 / 255, 0.55) : Qt.rgba(248 / 255, 249 / 255, 252 / 255, 0.52)
 

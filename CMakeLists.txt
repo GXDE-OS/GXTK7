@@ -78,6 +78,7 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/DialogButtonBox.qml
   ${GXDE_STYLE_QML_DIR}/Frame.qml
   ${GXDE_STYLE_QML_DIR}/GroupBox.qml
+  ${GXDE_STYLE_QML_DIR}/GXTitleBar.qml
   ${GXDE_STYLE_QML_DIR}/GxdePalette.qml
   ${GXDE_STYLE_QML_DIR}/ImageButton.qml
   ${GXDE_STYLE_QML_DIR}/ItemDelegate.qml
@@ -91,6 +92,8 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/ProgressBar.qml
   ${GXDE_STYLE_QML_DIR}/RadioButton.qml
   ${GXDE_STYLE_QML_DIR}/ScrollBar.qml
+  ${GXDE_STYLE_QML_DIR}/SettingsModule.qml
+  ${GXDE_STYLE_QML_DIR}/SettingsView.qml
   ${GXDE_STYLE_QML_DIR}/Slider.qml
   ${GXDE_STYLE_QML_DIR}/SpinBox.qml
   ${GXDE_STYLE_QML_DIR}/Switch.qml
@@ -103,6 +106,9 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/ToolTip.qml
   ${GXDE_STYLE_QML_DIR}/impl/ButtonPanel.qml
   ${GXDE_STYLE_QML_DIR}/impl/EditFrame.qml
+  ${GXDE_STYLE_QML_DIR}/impl/ModuleListDelegate.qml
+  ${GXDE_STYLE_QML_DIR}/impl/ModuleTile.qml
+  ${GXDE_STYLE_QML_DIR}/impl/TitleBarButton.qml
 )
 
 file(GLOB_RECURSE GXDE_STYLE_ASSETS CONFIGURE_DEPENDS
@@ -117,6 +123,9 @@ set_source_files_properties(${GXDE_STYLE_QML_DIR}/GxdePalette.qml
 set_source_files_properties(
   ${GXDE_STYLE_QML_DIR}/impl/ButtonPanel.qml
   ${GXDE_STYLE_QML_DIR}/impl/EditFrame.qml
+  ${GXDE_STYLE_QML_DIR}/impl/ModuleListDelegate.qml
+  ${GXDE_STYLE_QML_DIR}/impl/ModuleTile.qml
+  ${GXDE_STYLE_QML_DIR}/impl/TitleBarButton.qml
   PROPERTIES QT_QML_INTERNAL_TYPE TRUE
 )
 
@@ -161,4 +170,5 @@ install(FILES "${GXDE_STYLE_QMLDIR}" "${GXDE_STYLE_TYPEINFO}"
 
 if(GXTK7_BUILD_EXAMPLES)
   add_subdirectory(examples/gallery)
+  add_subdirectory(examples/control_center)
 endif()
