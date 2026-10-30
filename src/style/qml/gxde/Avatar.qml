@@ -18,7 +18,6 @@
 import QtQuick
 import QtQuick.Templates as T
 
-// AvatarWidget: a user picture in a circle. Selected shows a white ring.
 T.AbstractButton {
   id: control
 

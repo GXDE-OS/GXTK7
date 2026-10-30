@@ -20,9 +20,6 @@ import QtQuick.Shapes
 import QtQuick.Templates as T
 import QtQuick.Controls.Gxde
 
-// DArrowRectangle: a rounded panel with an arrow on one side, for bubbles
-// that point at an item. The arrow side gets more padding, so the content
-// does not cover the arrow.
 T.Control {
   id: control
 
@@ -34,7 +31,6 @@ T.Control {
   }
 
   property int arrowDirection: ArrowRectangle.ArrowRight
-  // Arrow tip position on its side. Negative means centered.
   property real arrowPosition: -1
   property real arrowWidth: 12
   property real arrowHeight: 10
@@ -66,8 +62,6 @@ T.Control {
     }
   }
 
-  // Same path as DArrowRectanglePrivate: clockwise from the top-left corner,
-  // with the arrow on its side.
   function outlinePath() {
     const half = borderWidth / 2
     const dir = arrowDirection

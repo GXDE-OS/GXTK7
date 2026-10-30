@@ -18,8 +18,6 @@
 import QtQuick
 import QtQuick.Templates as T
 
-// DImageButton: a button that is just one picture per state. A state with
-// no picture uses the normal one.
 T.AbstractButton {
   id: control
 
@@ -34,7 +32,6 @@ T.AbstractButton {
       return disabledSource
     if (pressed && pressSource.toString())
       return pressSource
-    // Keep the checked picture on hover.
     if (checked && checkedSource.toString())
       return checkedSource
     if (hovered && hoverSource.toString())
