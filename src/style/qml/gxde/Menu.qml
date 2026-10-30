@@ -16,12 +16,18 @@
  */
 
 import QtQuick
+import QtQuick.Effects
 import QtQuick.Templates as T
 import QtQuick.Controls.Gxde
 import QtQuick.Window
 
 T.Menu {
   id: control
+
+  readonly property bool wayland: Qt.platform.pluginName.startsWith("wayland")
+  readonly property int radius: wayland ? 8 : 4
+  readonly property int shadowMargin: wayland ? 18 : 20
+  property bool blurBehind: false
 
   implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                           contentWidth + leftPadding + rightPadding)
@@ -34,6 +40,26 @@ T.Menu {
   bottomPadding: 4
   margins: 0
   overlap: 0
+  popupType: T.Popup.Window
+  leftInset: -shadowMargin
+  rightInset: -shadowMargin
+  topInset: -shadowMargin
+  bottomInset: -shadowMargin
+
+  function updateBlur() {
+    const window = background.Window.window
+    if (!opened || !window || (parent && window === parent.Window.window))
+      return
+
+    blurBehind = WindowEffects.isBlurSupported()
+    if (blurBehind)
+      WindowEffects.setBlurBehind(window, panel.mapToItem(null, 0, 0, panel.width, panel.height),
+                                  radius)
+  }
+
+  onOpened: Qt.callLater(updateBlur)
+  onWidthChanged: Qt.callLater(updateBlur)
+  onHeightChanged: Qt.callLater(updateBlur)
 
   delegate: MenuItem { }
 
@@ -49,12 +75,65 @@ T.Menu {
     T.ScrollIndicator.vertical: ScrollIndicator { }
   }
 
-  background: Rectangle {
-    implicitWidth: 159
-    implicitHeight: 19
-    color: GxdePalette.menuBackground
-    border.width: 1
-    border.color: GxdePalette.menuBorder
+  background: Item {
+    implicitWidth: 159 + 2 * control.shadowMargin
+    implicitHeight: 19 + 2 * control.shadowMargin
+
+    Item {
+      id: shadow
+
+      anchors.fill: parent
+      visible: false
+      layer.enabled: true
+
+      RectangularShadow {
+        x: panel.x
+        y: panel.y
+        width: panel.width
+        height: panel.height
+        offset.y: control.wayland ? 3 : 4
+        radius: control.radius
+        blur: control.wayland ? 14 : 15
+        color: control.wayland ? Qt.rgba(0, 0, 0, 0.18) : Qt.rgba(0, 0, 0, 100 / 255)
+      }
+    }
+
+    Item {
+      id: panelShape
+
+      anchors.fill: parent
+      visible: false
+      layer.enabled: true
+
+      Rectangle {
+        x: panel.x
+        y: panel.y
+        width: panel.width
+        height: panel.height
+        radius: control.radius
+      }
+    }
+
+    // Shadow outside panel
+    MultiEffect {
+      anchors.fill: parent
+      source: shadow
+      maskEnabled: true
+      maskInverted: true
+      maskSource: panelShape
+    }
+
+    Rectangle {
+      id: panel
+
+      anchors.fill: parent
+      anchors.margins: control.shadowMargin
+      radius: control.radius
+      color: control.blurBehind ? Qt.alpha(GxdePalette.menuBackground, control.wayland ? 0.45 : 0.6)
+                                : GxdePalette.menuBackground
+      border.width: 1
+      border.color: control.wayland ? Qt.rgba(0, 0, 0, 20 / 255) : GxdePalette.menuBorder
+    }
   }
 
   T.Overlay.modal: Rectangle {

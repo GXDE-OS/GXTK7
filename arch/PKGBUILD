@@ -10,6 +10,7 @@ license=('GPL-3.0-or-later')
 depends=(
   'gcc-libs'
   'glibc'
+  'gxde-bernese-git'
   'qt6-base'
   'qt6-declarative'
 )

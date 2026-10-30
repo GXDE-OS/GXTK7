@@ -34,6 +34,7 @@ find_package(Qt6 REQUIRED COMPONENTS
   Quick
   QuickControls2
 )
+find_package(GxdeBerneseQt6 0.1.1 REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -43,6 +44,8 @@ qt_add_library(gxde_style_plugin SHARED
   src/style/avatar_image/avatar_image.cc
   src/style/gxde_theme/gxde_theme.h
   src/style/gxde_theme/gxde_theme.cc
+  src/style/window_effects/window_effects.h
+  src/style/window_effects/window_effects.cc
 )
 
 target_include_directories(gxde_style_plugin
@@ -54,6 +57,7 @@ target_include_directories(gxde_style_plugin
     # file name only.
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/avatar_image
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/gxde_theme
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/style/window_effects
 )
 
 target_link_libraries(gxde_style_plugin
@@ -63,6 +67,8 @@ target_link_libraries(gxde_style_plugin
     Qt6::Qml
     Qt6::Quick
     Qt6::QuickControls2
+  PRIVATE
+    GxdeBernese::Qt6
 )
 
 set(GXDE_STYLE_QML_DIR src/style/qml/gxde)
