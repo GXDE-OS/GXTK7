@@ -2,7 +2,7 @@
 
 pkgname=gxtk7
 pkgver=0.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc='Qt Quick Controls style with the DTK2 look for GXDE'
 arch=('x86_64' 'aarch64' 'loong64' 'riscv64')
 url='https://github.com/GXDE-OS/GXTK7'
