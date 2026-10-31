@@ -24,5 +24,6 @@ Depends:
  qml6-module-qtqml-models,
  qml6-module-qtquick,
  qml6-module-qtquick-controls,
+ qml6-module-qtquick-effects,
  qml6-module-qtquick-templates,
 Description: GXTK 7 is GXDE-OS's QtQuick UI library & style plugin that mimics Deepin's DTK2Widget library.

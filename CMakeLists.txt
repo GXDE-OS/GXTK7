@@ -117,6 +117,16 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/impl/TitleBarButton.qml
 )
 
+# RectangularShadow was added to QtQuick.Effects in Qt 6.9, but Menu.qml uses
+# it unconditionally.  When building against an older Qt, compile a drop-in
+# internal type of the same name into the module instead; Qt 6.9+ builds keep
+# the stock Qt type and never see this file.
+if(Qt6_VERSION VERSION_LESS 6.9)
+  list(APPEND GXDE_STYLE_QML_FILES
+    ${GXDE_STYLE_QML_DIR}/RectangularShadow.qml
+  )
+endif()
+
 file(GLOB_RECURSE GXDE_STYLE_ASSETS CONFIGURE_DEPENDS
   RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
   ${GXDE_STYLE_QML_DIR}/assets/*.png
@@ -134,6 +144,12 @@ set_source_files_properties(
   ${GXDE_STYLE_QML_DIR}/impl/TitleBarButton.qml
   PROPERTIES QT_QML_INTERNAL_TYPE TRUE
 )
+
+if(Qt6_VERSION VERSION_LESS 6.9)
+  set_source_files_properties(${GXDE_STYLE_QML_DIR}/RectangularShadow.qml
+    PROPERTIES QT_QML_INTERNAL_TYPE TRUE
+  )
+endif()
 
 foreach(file IN LISTS GXDE_STYLE_QML_FILES GXDE_STYLE_ASSETS)
   string(REPLACE "${GXDE_STYLE_QML_DIR}/" "" alias "${file}")
