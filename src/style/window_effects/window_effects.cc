@@ -15,9 +15,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "src/style/window_effects/window_effects.h"
-
 #include <bernese/window_effects.h>
+
+#include <QGuiApplication>
+
+#include "src/style/window_effects/window_effects.h"
 
 namespace gxde {
 
@@ -35,6 +37,17 @@ bool WindowEffects::setBlurBehind(QWindow* window,  // NOLINT
 
 bool WindowEffects::clearBlurBehind(QWindow* window) {  // NOLINT
   return bernese::window_effects::ClearBlurBehind(window);
+}
+
+bool WindowEffects::hasCompositing() const {  // NOLINT
+  if (QGuiApplication::platformName() != QLatin1String("xcb")) {
+    return true;
+  }
+  return bernese::window_effects::HasCompositingManager();
+}
+
+bool WindowEffects::setNoTitleBar(QWindow* window, bool no_title_bar) {  // NOLINT
+  return bernese::window_effects::SetNoTitleBar(window, no_title_bar);
 }
 
 }  // namespace gxde

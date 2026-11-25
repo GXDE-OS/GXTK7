@@ -54,6 +54,11 @@ T.Control {
 
   property bool fixCenterPos: false
 
+  // "Set Window Background" of DTK2's title bar menu.  GXMainWindow sets
+  // these; the item stays hidden otherwise.
+  property bool backgroundActionVisible: false
+  property bool backgroundActionChecked: false
+
   readonly property bool customMode: customItem !== null || priv.slots.length > 0
   readonly property int buttonAreaWidth: buttonRow.width
   readonly property T.Menu currentMenu: menu ?? defaultMenu
@@ -70,6 +75,7 @@ T.Control {
   signal mouseMoving(int button)
   signal helpRequested()
   signal aboutRequested()
+  signal backgroundActionTriggered(bool checked)
 
   function toggleWindowState() {
     if (!targetWindow || (disableFlags & Qt.WindowMaximizeButtonHint))
@@ -103,6 +109,7 @@ T.Control {
 
     if (menu.count > 0)
       menu.addItem(separatorComponent.createObject(null))
+    menu.addItem(backgroundItemComponent.createObject(null))
     if (helpVisible)
       menu.addItem(menuItemComponent.createObject(null, {
         text: qsTranslate("TitleBarMenu", "Help"),
@@ -185,6 +192,29 @@ T.Control {
     MenuItem {
       property var handler
       onTriggered: handler()
+    }
+  }
+
+  Component {
+    id: backgroundItemComponent
+
+    MenuItem {
+      readonly property bool wanted: control.backgroundActionChecked
+
+      text: qsTranslate("TitleBarMenu", "Set Window Background")
+      checkable: true
+      checked: wanted
+      visible: control.backgroundActionVisible
+      enabled: visible
+      height: visible ? implicitHeight : 0
+
+      onWantedChanged: checked = wanted
+      onTriggered: {
+        const requested = checked
+        // The state only changes once the picture is set or removed.
+        checked = wanted
+        control.backgroundActionTriggered(requested)
+      }
     }
   }
 

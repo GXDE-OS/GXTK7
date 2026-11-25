@@ -68,6 +68,26 @@ class WindowEffects : public QObject {
    * @return True when the blur was removed.
    */
   Q_INVOKABLE bool clearBlurBehind(QWindow* window);  // NOLINT
+
+  /**
+   * @brief Check if the desktop composites windows.
+   *
+   * Without a compositor, the transparent parts of a window show black, so
+   * client side shadows and rounded corners must not be drawn.
+   * @return True on X11 with a compositing manager and on every other
+   *         platform.
+   */
+  Q_INVOKABLE bool hasCompositing() const;  // NOLINT
+
+  /**
+   * @brief Asks the Wayland compositor not to draw a title bar.
+   *
+   * @note Call this again after each show.
+   * @param window The window, may be null.
+   * @param no_title_bar True to remove the title bar.
+   * @return True when the request was sent.
+   */
+  Q_INVOKABLE bool setNoTitleBar(QWindow* window, bool no_title_bar);  // NOLINT
 };
 
 }  // namespace gxde

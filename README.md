@@ -195,8 +195,8 @@ For more, please refer to the [widget gallery example](./examples/gallery/) and 
 - [ ] `GXListView`
 - [ ] `GXListWidget`
 - [ ] `GXLoadingIndicator`
-- [ ] `GXMainWindow`
-- [ ] `GXMainWindowBackground`
+- [X] `GXMainWindow`
+- [X] `GXMainWindowBackground`
 - [ ] `GXMPRISControl`
 - [ ] `GXOption`
 - [ ] `GXOptionList`

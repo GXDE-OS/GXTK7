@@ -44,6 +44,8 @@ qt_add_library(gxde_style_plugin SHARED
   src/style/avatar_image/avatar_image.cc
   src/style/gxde_theme/gxde_theme.h
   src/style/gxde_theme/gxde_theme.cc
+  src/style/main_window_background/main_window_background.h
+  src/style/main_window_background/main_window_background.cc
   src/style/window_effects/window_effects.h
   src/style/window_effects/window_effects.cc
 )
@@ -57,6 +59,7 @@ target_include_directories(gxde_style_plugin
     # file name only.
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/avatar_image
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/gxde_theme
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/style/main_window_background
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/window_effects
 )
 
@@ -84,6 +87,7 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/DialogButtonBox.qml
   ${GXDE_STYLE_QML_DIR}/Frame.qml
   ${GXDE_STYLE_QML_DIR}/GroupBox.qml
+  ${GXDE_STYLE_QML_DIR}/GXMainWindow.qml
   ${GXDE_STYLE_QML_DIR}/GXTitleBar.qml
   ${GXDE_STYLE_QML_DIR}/GxdePalette.qml
   ${GXDE_STYLE_QML_DIR}/ImageButton.qml
