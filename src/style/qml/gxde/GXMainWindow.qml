@@ -40,7 +40,9 @@ ApplicationWindow {
   // see-through while the blur is on.
   property color windowColor: GxdePalette.window
   property bool translucentBackground: false
-  property bool enableBlurWindow: false
+  // On by default: the blur is used wherever the platform has it (see
+  // blurActive).  Set it to false to keep the frame opaque.
+  property bool enableBlurWindow: true
 
   property bool enableSystemResize: true
   property bool enableSystemMove: true
