@@ -44,7 +44,8 @@ ApplicationWindow {
 
   property bool enableSystemResize: true
   property bool enableSystemMove: true
-  // Width of the band outside the frame that resizes the window.
+  // Least room left outside the frame for resizing.  All of the room outside
+  // the frame, shadow included, resizes the window.
   property int resizeHandleSize: 8
 
   // Shows "Set Window Background" in the title bar menu.  The background
@@ -52,6 +53,8 @@ ApplicationWindow {
   property bool enableWindowBackground: false
 
   readonly property alias titlebar: titleBar
+  // The QWindowKit agent that makes the window frameless.
+  readonly property alias windowAgent: agent
   readonly property GXMainWindowBackground windowBackground: GXMainWindowBackground { }
 
   readonly property bool decorated: priv.decorated
@@ -64,6 +67,21 @@ ApplicationWindow {
   readonly property int frameMarginBottom: priv.marginBottom
   // The frame in window coordinates.
   readonly property rect frameRect: Qt.rect(frame.x, frame.y, frame.width, frame.height)
+
+  // Lets the title bar items that take mouse input keep it, instead of
+  // moving the window.
+  function updateHitTest() {
+    const items = [titleBar.optionButton, titleBar.quitFullscreenButton]
+                  .concat(Array.from(titleBar.customItems))
+                  .filter(item => item !== null)
+    for (const old of priv.hitTestItems) {
+      if (old && !items.includes(old))
+        agent.setHitTestVisible(old, false)
+    }
+    for (const item of items)
+      agent.setHitTestVisible(item, true)
+    priv.hitTestItems = items
+  }
 
   function refreshBackground() {
     windowBackground.refresh()
@@ -93,13 +111,17 @@ ApplicationWindow {
   onWidthChanged: Qt.callLater(updatePlatformWindow)
   onHeightChanged: Qt.callLater(updatePlatformWindow)
   onBlurActiveChanged: Qt.callLater(updatePlatformWindow)
-  Component.onCompleted: Qt.callLater(updatePlatformWindow)
+  Component.onCompleted: {
+    updateHitTest()
+    Qt.callLater(updatePlatformWindow)
+  }
 
   contentData: [
     QtObject {
       id: priv
 
       property bool blurSent: false
+      property var hitTestItems: []
       property bool compositorFrame: false
       readonly property bool blurSupported: WindowEffects.isBlurSupported()
       readonly property bool compositing: WindowEffects.hasCompositing()
@@ -128,6 +150,18 @@ ApplicationWindow {
       readonly property color fill: window.translucentBackground ? "transparent"
                                   : window.blurActive ? Qt.alpha(window.windowColor, 0.7)
                                   : window.windowColor
+    },
+
+    // QWindowKit: dragging and double clicking the title bar, the system
+    // window menu on a right click, and resizing at the window edges.
+    GXWindowAgent {
+      id: agent
+
+      window: window
+      titleBar: titleBar
+      minimizeButton: titleBar.minimizeButton
+      maximizeButton: titleBar.maximizeButton
+      closeButton: titleBar.closeButton
     },
 
     FileDialog {
@@ -299,6 +333,7 @@ ApplicationWindow {
         targetWindow: window
         backgroundActionVisible: window.enableWindowBackground
         backgroundActionChecked: window.windowBackground.userBackgroundSet
+        onCustomItemsChanged: window.updateHitTest()
         onBackgroundActionTriggered: checked => {
           if (checked) {
             backgroundDialog.open()
@@ -391,14 +426,12 @@ ApplicationWindow {
       hoverEnabled: true
       acceptedButtons: Qt.LeftButton
 
-      // Only the band around the frame belongs to this area; the rest of the
-      // shadow and the frame itself are left alone.
+      // Everything outside the frame belongs to this area, so the frame
+      // itself is left alone.  QWindowKit also resizes from the outermost
+      // pixels of the window, which lie in this area too.
       containmentMask: QtObject {
         function contains(point: point): bool {
-          const band = window.resizeHandleSize
-          return point.x >= frame.x - band && point.x < frame.x + frame.width + band
-                 && point.y >= frame.y - band && point.y < frame.y + frame.height + band
-                 && resizeArea.edgesAt(point.x, point.y) !== 0
+          return resizeArea.edgesAt(point.x, point.y) !== 0
         }
       }
 

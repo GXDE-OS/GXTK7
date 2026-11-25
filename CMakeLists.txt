@@ -37,6 +37,19 @@ find_package(Qt6 REQUIRED COMPONENTS
 )
 find_package(GxdeBerneseQt6 0.1.1 REQUIRED)
 
+# QWindowKit, vendored in libs/qwindowkit, makes GXMainWindow frameless.  Only
+# its Quick module is needed; it is built static and linked into the style
+# library, so nothing of it is installed.
+set(QWINDOWKIT_BUILD_STATIC ON)
+set(QWINDOWKIT_BUILD_WIDGETS OFF)
+set(QWINDOWKIT_BUILD_QUICK ON)
+set(QWINDOWKIT_BUILD_EXAMPLES OFF)
+set(QWINDOWKIT_BUILD_TESTS OFF)
+set(QWINDOWKIT_BUILD_DOCUMENTATIONS OFF)
+set(QWINDOWKIT_INSTALL OFF)
+set(QWINDOWKIT_ENABLE_STYLE_AGENT OFF)
+add_subdirectory(libs/qwindowkit EXCLUDE_FROM_ALL)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
@@ -47,6 +60,8 @@ qt_add_library(gxde_style_plugin SHARED
   src/style/gxde_theme/gxde_theme.cc
   src/style/main_window_background/main_window_background.h
   src/style/main_window_background/main_window_background.cc
+  src/style/window_agent/window_agent.h
+  src/style/window_agent/window_agent.cc
   src/style/window_effects/window_effects.h
   src/style/window_effects/window_effects.cc
 )
@@ -61,6 +76,7 @@ target_include_directories(gxde_style_plugin
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/avatar_image
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/gxde_theme
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/main_window_background
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/style/window_agent
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/window_effects
 )
 
@@ -74,6 +90,7 @@ target_link_libraries(gxde_style_plugin
   PRIVATE
     Qt6::DBus
     GxdeBernese::Qt6
+    QWindowKit::Quick
 )
 
 set(GXDE_STYLE_QML_DIR src/style/qml/gxde)

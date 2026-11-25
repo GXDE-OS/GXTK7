@@ -60,6 +60,15 @@ T.Control {
   property bool backgroundActionChecked: false
 
   readonly property bool customMode: customItem !== null || priv.slots.length > 0
+  // Items added with customItem or addItem().
+  readonly property list<Item> customItems: priv.slots.map(slot => slot.target)
+
+  // The buttons, for a frameless window helper such as GXWindowAgent.
+  readonly property alias optionButton: optionButton
+  readonly property alias minimizeButton: minButton
+  readonly property alias maximizeButton: maxButton
+  readonly property alias closeButton: closeButton
+  readonly property alias quitFullscreenButton: quitFullButton
   readonly property int buttonAreaWidth: buttonRow.width
   readonly property T.Menu currentMenu: menu ?? defaultMenu
 
