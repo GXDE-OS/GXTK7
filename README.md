@@ -124,6 +124,7 @@ $ QT_QUICK_CONTROLS_STYLE=QtQuick.Controls.Gxde ./your_app
 ```
 
 The `GxdeTheme` singleton (`import QtQuick.Controls.Gxde`) switches between the light and dark schemes through its `isDark` property.
+By default it follows the system preference (the XDG desktop portal's `color-scheme`, or Qt's `QStyleHints::colorScheme()` without a portal). Setting `isDark` by hand stops that; set `followSystem` to `true` to follow the system again.
 For more, please refer to the [widget gallery example](./examples/gallery/) and the [documentation](./docs/).
 
 

@@ -29,6 +29,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Qt6 REQUIRED COMPONENTS
   Core
+  DBus
   Gui
   Qml
   Quick
@@ -71,6 +72,7 @@ target_link_libraries(gxde_style_plugin
     Qt6::Quick
     Qt6::QuickControls2
   PRIVATE
+    Qt6::DBus
     GxdeBernese::Qt6
 )
 
