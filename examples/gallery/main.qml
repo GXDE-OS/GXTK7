@@ -103,6 +103,9 @@ ApplicationWindow {
     TabButton {
       text: qsTr("Containers && Popups")
     }
+    TabButton {
+      text: qsTr("Files")
+    }
   }
 
   StackLayout {
@@ -475,6 +478,94 @@ ApplicationWindow {
           }
 
           ScrollBar.vertical: ScrollBar { }
+        }
+      }
+    }
+
+    // DFM's side bar and file list.
+    ColumnLayout {
+      spacing: 8
+
+      RowLayout {
+        spacing: 8
+
+        RadioButton {
+          text: qsTr("Icons")
+          checked: fileView.viewMode === GXFileView.IconMode
+          onClicked: fileView.viewMode = GXFileView.IconMode
+        }
+        RadioButton {
+          text: qsTr("List")
+          checked: fileView.viewMode === GXFileView.ListMode
+          onClicked: fileView.viewMode = GXFileView.ListMode
+        }
+        RadioButton {
+          text: qsTr("Extend")
+          checked: fileView.viewMode === GXFileView.ExtendMode
+          onClicked: fileView.viewMode = GXFileView.ExtendMode
+        }
+        CheckBox {
+          text: qsTr("Hidden files")
+          checked: fileView.model.showHidden
+          onToggled: fileView.model.showHidden = checked
+        }
+        Slider {
+          Layout.preferredWidth: 140
+          enabled: fileView.viewMode === GXFileView.IconMode
+          from: 0
+          to: fileView.iconSizes.length - 1
+          stepSize: 1
+          snapMode: Slider.SnapAlways
+          value: fileView.iconSizeLevel
+          onMoved: fileView.iconSizeLevel = value
+        }
+        Button {
+          text: qsTr("Up")
+          enabled: fileView.model.parentFolder.toString() !== ""
+          onClicked: fileView.goUp()
+        }
+        Label {
+          Layout.fillWidth: true
+          text: fileView.selectedPaths.length > 0
+                ? qsTr("%n selected", "", fileView.selectedPaths.length)
+                : qsTr("%n items", "", fileView.count)
+          horizontalAlignment: Text.AlignRight
+        }
+      }
+
+      Frame {
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        padding: 0
+
+        RowLayout {
+          anchors.fill: parent
+          spacing: 0
+
+          GXSideBar {
+            id: sideBar
+
+            Layout.preferredWidth: 180
+            Layout.fillHeight: true
+            currentUrl: fileView.folder
+            onActivated: entry => {
+              if (String(entry.url).startsWith("file:"))
+                fileView.folder = entry.url
+            }
+          }
+
+          GXFileView {
+            id: fileView
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            clip: true
+            folder: sideBar.defaultModel[0].url
+            onActivated: file => {
+              if (!file.isDir)
+                Qt.openUrlExternally(file.fileUrl)
+            }
+          }
         }
       }
     }

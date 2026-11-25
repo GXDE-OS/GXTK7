@@ -250,6 +250,11 @@ For more, please refer to the [widget gallery example](./examples/gallery/) and 
 - [ ] `GXWindowMinButton`
 - [ ] `GXWindowOptionButton`
 
+From the file manager ([gxde-file-manager](https://gitee.com/GXDE-OS/gxde-file-manager)):
+- [X] `GXSideBar`, its left side bar
+- [X] `GXFileView`, its file list with the icon, list and extend modes
+- [X] `GXFileSystemModel`, the folder listing behind `GXFileView`
+
 
 
 <!-- CONTRIBUTING -->

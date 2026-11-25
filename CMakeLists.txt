@@ -56,10 +56,14 @@ set(CMAKE_AUTORCC ON)
 qt_add_library(gxde_style_plugin SHARED
   src/style/avatar_image/avatar_image.h
   src/style/avatar_image/avatar_image.cc
+  src/style/file_system_model/file_system_model.h
+  src/style/file_system_model/file_system_model.cc
   src/style/gxde_theme/gxde_theme.h
   src/style/gxde_theme/gxde_theme.cc
   src/style/main_window_background/main_window_background.h
   src/style/main_window_background/main_window_background.cc
+  src/style/theme_icon/theme_icon.h
+  src/style/theme_icon/theme_icon.cc
   src/style/window_agent/window_agent.h
   src/style/window_agent/window_agent.cc
   src/style/window_effects/window_effects.h
@@ -74,8 +78,10 @@ target_include_directories(gxde_style_plugin
     # The generated QML type registration includes QML_ELEMENT headers by
     # file name only.
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/avatar_image
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/style/file_system_model
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/gxde_theme
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/main_window_background
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/style/theme_icon
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/window_agent
     ${CMAKE_CURRENT_SOURCE_DIR}/src/style/window_effects
 )
@@ -106,8 +112,10 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/DialogButtonBox.qml
   ${GXDE_STYLE_QML_DIR}/Frame.qml
   ${GXDE_STYLE_QML_DIR}/GXAboutDialog.qml
+  ${GXDE_STYLE_QML_DIR}/GXFileView.qml
   ${GXDE_STYLE_QML_DIR}/GroupBox.qml
   ${GXDE_STYLE_QML_DIR}/GXMainWindow.qml
+  ${GXDE_STYLE_QML_DIR}/GXSideBar.qml
   ${GXDE_STYLE_QML_DIR}/GXTitleBar.qml
   ${GXDE_STYLE_QML_DIR}/GxdePalette.qml
   ${GXDE_STYLE_QML_DIR}/ImageButton.qml
