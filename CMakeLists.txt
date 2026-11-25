@@ -48,6 +48,10 @@ set(QWINDOWKIT_BUILD_TESTS OFF)
 set(QWINDOWKIT_BUILD_DOCUMENTATIONS OFF)
 set(QWINDOWKIT_INSTALL OFF)
 set(QWINDOWKIT_ENABLE_STYLE_AGENT OFF)
+# QWindowKit looks for Qt 6 or Qt 5 itself and can take Qt 5 when both are
+# installed, as on the riscv64 builder; a preset major version makes it use
+# the Qt 6 found above.
+set(QT_VERSION_MAJOR 6)
 add_subdirectory(libs/qwindowkit EXCLUDE_FROM_ALL)
 
 set(CMAKE_AUTOMOC ON)
