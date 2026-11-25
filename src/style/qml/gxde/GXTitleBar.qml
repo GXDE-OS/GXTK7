@@ -45,7 +45,14 @@ T.Control {
 
   property T.Menu menu: null
 
+  // The default items DTK2 adds to the title bar menu.  Each can be turned
+  // on and off at any time.
   property bool helpVisible: false
+  property bool aboutVisible: true
+  property bool quitVisible: true
+  // "Set Window Background"; GXMainWindow turns it on.
+  property bool backgroundVisible: false
+  property bool backgroundChecked: false
   property bool menuVisible: windowType === Qt.Window
   property bool menuDisabled: false
 
@@ -53,11 +60,6 @@ T.Control {
   property int customAlignment: Qt.AlignCenter
 
   property bool fixCenterPos: false
-
-  // "Set Window Background" of DTK2's title bar menu.  GXMainWindow sets
-  // these; the item stays hidden otherwise.
-  property bool backgroundActionVisible: false
-  property bool backgroundActionChecked: false
 
   readonly property bool customMode: customItem !== null || priv.slots.length > 0
   // Items added with customItem or addItem().
@@ -84,7 +86,7 @@ T.Control {
   signal mouseMoving(int button)
   signal helpRequested()
   signal aboutRequested()
-  signal backgroundActionTriggered(bool checked)
+  signal backgroundToggled(bool checked)
 
   function toggleWindowState() {
     if (!targetWindow || (disableFlags & Qt.WindowMaximizeButtonHint))
@@ -116,22 +118,13 @@ T.Control {
       return
     priv.extendedMenus.push(menu)
 
+    // All of them are made now and shown by their *Visible property, so
+    // turning one on later works too.
     if (menu.count > 0)
       menu.addItem(separatorComponent.createObject(null))
     menu.addItem(backgroundItemComponent.createObject(null))
-    if (helpVisible)
-      menu.addItem(menuItemComponent.createObject(null, {
-        text: qsTranslate("TitleBarMenu", "Help"),
-        handler: () => control.helpRequested()
-      }))
-    menu.addItem(menuItemComponent.createObject(null, {
-      text: qsTranslate("TitleBarMenu", "About"),
-      handler: () => control.aboutRequested()
-    }))
-    menu.addItem(menuItemComponent.createObject(null, {
-      text: qsTranslate("TitleBarMenu", "Exit"),
-      handler: () => Qt.quit()
-    }))
+    for (const kind of ["help", "about", "quit"])
+      menu.addItem(menuItemComponent.createObject(null, { kind: kind }))
   }
 
   function rebuildCustomArea() {
@@ -187,20 +180,50 @@ T.Control {
                                       || control.targetWindow.minimumHeight !== control.targetWindow.maximumHeight
     readonly property bool hideForFullScreen: control.autoHideOnFullscreen && control.fullScreen
     readonly property bool iconSet: control.iconName !== "" || control.iconSource.toString() !== ""
+    readonly property bool anyDefaultItem: control.helpVisible || control.aboutVisible
+                                           || control.quitVisible || control.backgroundVisible
 
     onHideForFullScreenChanged: revealed = false
   }
 
   Component {
     id: separatorComponent
-    MenuSeparator { }
+
+    // Separates the default items from the caller's ones.
+    MenuSeparator {
+      readonly property bool shown: priv.anyDefaultItem
+
+      visible: shown
+      height: shown ? implicitHeight : 0
+    }
   }
 
   Component {
     id: menuItemComponent
+
     MenuItem {
-      property var handler
-      onTriggered: handler()
+      property string kind
+
+      text: kind === "help" ? qsTranslate("TitleBarMenu", "Help")
+          : kind === "about" ? qsTranslate("TitleBarMenu", "About")
+          : qsTranslate("TitleBarMenu", "Exit")
+      // Not visible itself: that also reads false while the menu is closed.
+      readonly property bool shown: kind === "help" ? control.helpVisible
+                                  : kind === "about" ? control.aboutVisible
+                                  : control.quitVisible
+
+      visible: shown
+      enabled: shown
+      height: shown ? implicitHeight : 0
+
+      onTriggered: {
+        if (kind === "help")
+          control.helpRequested()
+        else if (kind === "about")
+          control.aboutRequested()
+        else
+          Qt.quit()
+      }
     }
   }
 
@@ -208,21 +231,23 @@ T.Control {
     id: backgroundItemComponent
 
     MenuItem {
-      readonly property bool wanted: control.backgroundActionChecked
+      readonly property bool wanted: control.backgroundChecked
+
+      readonly property bool shown: control.backgroundVisible
 
       text: qsTranslate("TitleBarMenu", "Set Window Background")
       checkable: true
       checked: wanted
-      visible: control.backgroundActionVisible
-      enabled: visible
-      height: visible ? implicitHeight : 0
+      visible: shown
+      enabled: shown
+      height: shown ? implicitHeight : 0
 
       onWantedChanged: checked = wanted
       onTriggered: {
         const requested = checked
         // The state only changes once the picture is set or removed.
         checked = wanted
-        control.backgroundActionTriggered(requested)
+        control.backgroundToggled(requested)
       }
     }
   }

@@ -105,6 +105,7 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/Dialog.qml
   ${GXDE_STYLE_QML_DIR}/DialogButtonBox.qml
   ${GXDE_STYLE_QML_DIR}/Frame.qml
+  ${GXDE_STYLE_QML_DIR}/GXAboutDialog.qml
   ${GXDE_STYLE_QML_DIR}/GroupBox.qml
   ${GXDE_STYLE_QML_DIR}/GXMainWindow.qml
   ${GXDE_STYLE_QML_DIR}/GXTitleBar.qml

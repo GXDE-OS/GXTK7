@@ -133,7 +133,7 @@ For more, please refer to the [widget gallery example](./examples/gallery/) and 
 ## Roadmap
 - [X] To provide basic QtQuick style.
 
-- [ ] `GXAboutDialog`
+- [X] `GXAboutDialog`
 - [ ] `GXAbstractDialog`
 - [ ] `GXAnchorsBase`
 - [ ] `GXEnhancedWidget`

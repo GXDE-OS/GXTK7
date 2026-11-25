@@ -50,13 +50,17 @@ ApplicationWindow {
   // the frame, shadow included, resizes the window.
   property int resizeHandleSize: 8
 
-  // Shows "Set Window Background" in the title bar menu.  The background
-  // pictures are drawn either way.
-  property bool enableWindowBackground: false
+  // The default items of the title bar menu, like DMainWindow's.  Each can
+  // be turned off.  The background pictures are drawn either way.
+  property bool aboutActionVisible: true
+  property bool quitActionVisible: true
+  property bool backgroundActionVisible: true
 
   readonly property alias titlebar: titleBar
   // The QWindowKit agent that makes the window frameless.
   readonly property alias windowAgent: agent
+  // Opened by "About" in the title bar menu; set its properties to fill it.
+  readonly property alias aboutDialog: aboutDialog
   readonly property GXMainWindowBackground windowBackground: GXMainWindowBackground { }
 
   readonly property bool decorated: priv.decorated
@@ -164,6 +168,13 @@ ApplicationWindow {
       minimizeButton: titleBar.minimizeButton
       maximizeButton: titleBar.maximizeButton
       closeButton: titleBar.closeButton
+    },
+
+    GXAboutDialog {
+      id: aboutDialog
+
+      productIconName: titleBar.iconName || Qt.application.name
+      productIconSource: titleBar.iconSource
     },
 
     FileDialog {
@@ -333,10 +344,13 @@ ApplicationWindow {
 
         width: parent.width
         targetWindow: window
-        backgroundActionVisible: window.enableWindowBackground
-        backgroundActionChecked: window.windowBackground.userBackgroundSet
+        aboutVisible: window.aboutActionVisible
+        quitVisible: window.quitActionVisible
+        backgroundVisible: window.backgroundActionVisible
+        backgroundChecked: window.windowBackground.userBackgroundSet
+        onAboutRequested: aboutDialog.open()
         onCustomItemsChanged: window.updateHitTest()
-        onBackgroundActionTriggered: checked => {
+        onBackgroundToggled: checked => {
           if (checked) {
             backgroundDialog.open()
             return
