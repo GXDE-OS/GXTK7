@@ -44,3 +44,6 @@ After building, you can run the gallery example to test the components:
 - Ensure all new QML components added to `src/style/qml/gxde` are properly included in the `GXDE_STYLE_QML_FILES` variable in the root `CMakeLists.txt` (or appropriate sub-module configuration).
 - Maintain C++17 compliance.
 - Keep the `examples/gallery` directory as the primary location for feature demonstration and manual testing.
+
+## Vendored Library Policy
+- **DO NOT MODIFY VENDORED LIBRARY**
