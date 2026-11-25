@@ -57,7 +57,7 @@
 ## About The Project
 ![Screenshot](./docs/imgs/screenshot.png)
 
-GXTK 7 is GXDE-OS's QtQuick UI library & style plugin that mimics Deepin's DTK2Widget library. It aims to bring the apperance of DTK2Widget back to the modern Qt6 Quick applications without need of DTK2Widget-Qt6 (I also made that library but I really want to retire that) library or any Qt private libraries.
+GXTK 7 is GXDE-OS's QtQuick UI library & style plugin that mimics Deepin's DTK2Widget library. It aims to bring the apperance of DTK2Widget back to the modern Qt6 Quick applications without need of DTK2Widget-Qt6 (I also made that library but I really want to retire that) library.
 
 Currently, GXTK7 is still in early development stage.
 
