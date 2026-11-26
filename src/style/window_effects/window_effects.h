@@ -88,6 +88,18 @@ class WindowEffects : public QObject {
    * @return True when the request was sent.
    */
   Q_INVOKABLE bool setNoTitleBar(QWindow* window, bool no_title_bar);  // NOLINT
+
+  /**
+   * @brief Moves a Wayland popup from where the compositor puts it.
+   *
+   * On Wayland, a menu opens at the bottom left of its parent item.  Popups
+   * that draw a shadow inside the window need moving back by its size.
+   * @note Call this before the popup is shown.
+   * @param window The popup window, may be null.
+   * @param x Offset to the right, in logical pixels.
+   * @param y Offset down, in logical pixels.
+   */
+  Q_INVOKABLE void setPopupOffset(QWindow* window, int x, int y);  // NOLINT
 };
 
 }  // namespace gxde

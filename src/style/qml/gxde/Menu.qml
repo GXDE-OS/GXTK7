@@ -27,6 +27,10 @@ T.Menu {
   readonly property bool wayland: Qt.platform.pluginName.startsWith("wayland")
   readonly property int radius: wayland ? 8 : 4
   readonly property int shadowMargin: wayland ? 18 : 20
+  // Qt does not grow popup windows by negative insets on Wayland, which
+  // would clip the shadow.  There the shadow room is padding inside the
+  // window instead, and the window moves back by it.
+  readonly property int windowMargin: wayland ? shadowMargin : 0
   property bool blurBehind: false
 
   implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
@@ -34,17 +38,17 @@ T.Menu {
   implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                            contentHeight + topPadding + bottomPadding)
 
-  leftPadding: 0
-  rightPadding: 0
-  topPadding: 4
-  bottomPadding: 4
+  leftPadding: windowMargin
+  rightPadding: windowMargin
+  topPadding: 4 + windowMargin
+  bottomPadding: 4 + windowMargin
   margins: 0
   overlap: 0
   popupType: T.Popup.Window
-  leftInset: -shadowMargin
-  rightInset: -shadowMargin
-  topInset: -shadowMargin
-  bottomInset: -shadowMargin
+  leftInset: windowMargin - shadowMargin
+  rightInset: windowMargin - shadowMargin
+  topInset: windowMargin - shadowMargin
+  bottomInset: windowMargin - shadowMargin
 
   function updateBlur() {
     const window = background.Window.window
@@ -64,6 +68,17 @@ T.Menu {
   delegate: MenuItem { }
 
   contentItem: ListView {
+    // As wide as the widest item, so long texts are not cut; the menu
+    // keeps the background's width as its least width.
+    implicitWidth: {
+      let width = 0
+      for (let i = 0; i < control.count; ++i) {
+        const item = control.itemAt(i)
+        if (item)
+          width = Math.max(width, item.implicitWidth)
+      }
+      return width
+    }
     implicitHeight: contentHeight
     model: control.contentModel
     interactive: Window.window
@@ -78,6 +93,16 @@ T.Menu {
   background: Item {
     implicitWidth: 159 + 2 * control.shadowMargin
     implicitHeight: 19 + 2 * control.shadowMargin
+
+    // On Wayland the menu opens at the bottom left of its parent, with the
+    // window there, not the panel inside its shadow room.  Qt reads the
+    // offset when it shows the window, right after the menu moves into it.
+    Window.onWindowChanged: {
+      const window = Window.window
+      if (control.windowMargin > 0 && window
+          && (!control.parent || window !== control.parent.Window.window))
+        WindowEffects.setPopupOffset(window, -control.windowMargin, -control.windowMargin)
+    }
 
     Item {
       id: shadow

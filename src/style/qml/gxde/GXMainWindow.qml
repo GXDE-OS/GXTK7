@@ -40,12 +40,14 @@ ApplicationWindow {
   // see-through while the blur is on.
   property color windowColor: GxdePalette.window
   property bool translucentBackground: false
-  // On by default: the blur is used wherever the platform has it (see
-  // blurActive).  Set it to false to keep the frame opaque.
-  property bool enableBlurWindow: true
+  // Blurs what is behind the window where the platform can (see
+  // blurActive).  Off by default; menus blur either way.
+  property bool enableBlurWindow: false
 
   property bool enableSystemResize: true
-  property bool enableSystemMove: true
+  // Dragging empty places of the content moves the window, like DTK2's
+  // enableSystemMove.  Off by default: only the title bar moves it.
+  property bool enableSystemMove: false
   // Least room left outside the frame for resizing.  All of the room outside
   // the frame, shadow included, resizes the window.
   property int resizeHandleSize: 8
@@ -321,7 +323,8 @@ ApplicationWindow {
         }
       }
 
-      // Drag the window from any place the content leaves alone.
+      // Drag the window from any place the content leaves alone, when
+      // enableSystemMove is on.
       MouseArea {
         property bool moveOnDrag: false
 

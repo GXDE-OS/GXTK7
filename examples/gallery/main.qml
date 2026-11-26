@@ -482,7 +482,7 @@ ApplicationWindow {
       }
     }
 
-    // DFM's side bar and file list.
+    // DFM's tool bar, side bar and file list.
     ColumnLayout {
       spacing: 8
 
@@ -491,18 +491,18 @@ ApplicationWindow {
 
         RadioButton {
           text: qsTr("Icons")
-          checked: fileView.viewMode === GXFileView.IconMode
-          onClicked: fileView.viewMode = GXFileView.IconMode
+          checked: toolBar.viewMode === GXFileView.IconMode
+          onClicked: toolBar.viewMode = GXFileView.IconMode
         }
         RadioButton {
           text: qsTr("List")
-          checked: fileView.viewMode === GXFileView.ListMode
-          onClicked: fileView.viewMode = GXFileView.ListMode
+          checked: toolBar.viewMode === GXFileView.ListMode
+          onClicked: toolBar.viewMode = GXFileView.ListMode
         }
         RadioButton {
           text: qsTr("Extend")
-          checked: fileView.viewMode === GXFileView.ExtendMode
-          onClicked: fileView.viewMode = GXFileView.ExtendMode
+          checked: toolBar.viewMode === GXFileView.ExtendMode
+          onClicked: toolBar.viewMode = GXFileView.ExtendMode
         }
         CheckBox {
           text: qsTr("Hidden files")
@@ -519,11 +519,6 @@ ApplicationWindow {
           value: fileView.iconSizeLevel
           onMoved: fileView.iconSizeLevel = value
         }
-        Button {
-          text: qsTr("Up")
-          enabled: fileView.model.parentFolder.toString() !== ""
-          onClicked: fileView.goUp()
-        }
         Label {
           Layout.fillWidth: true
           text: fileView.selectedPaths.length > 0
@@ -538,32 +533,49 @@ ApplicationWindow {
         Layout.fillHeight: true
         padding: 0
 
-        RowLayout {
+        ColumnLayout {
           anchors.fill: parent
           spacing: 0
 
-          GXSideBar {
-            id: sideBar
-
-            Layout.preferredWidth: 180
-            Layout.fillHeight: true
-            currentUrl: fileView.folder
-            onActivated: entry => {
-              if (String(entry.url).startsWith("file:"))
-                fileView.folder = entry.url
-            }
-          }
-
-          GXFileView {
-            id: fileView
+          GXFileToolBar {
+            id: toolBar
 
             Layout.fillWidth: true
+            folder: fileView.folder
+            newTabButtonVisible: true
+            onFolderRequested: url => fileView.folder = url
+          }
+
+          RowLayout {
+            Layout.fillWidth: true
             Layout.fillHeight: true
-            clip: true
-            folder: sideBar.defaultModel[0].url
-            onActivated: file => {
-              if (!file.isDir)
-                Qt.openUrlExternally(file.fileUrl)
+            spacing: 0
+
+            GXSideBar {
+              id: sideBar
+
+              visible: toolBar.sideBarVisible
+              Layout.preferredWidth: 180
+              Layout.fillHeight: true
+              currentUrl: fileView.folder
+              onActivated: entry => {
+                if (String(entry.url).startsWith("file:"))
+                  fileView.folder = entry.url
+              }
+            }
+
+            GXFileView {
+              id: fileView
+
+              Layout.fillWidth: true
+              Layout.fillHeight: true
+              clip: true
+              viewMode: toolBar.viewMode
+              folder: sideBar.defaultModel[0].url
+              onActivated: file => {
+                if (!file.isDir)
+                  Qt.openUrlExternally(file.fileUrl)
+              }
             }
           }
         }

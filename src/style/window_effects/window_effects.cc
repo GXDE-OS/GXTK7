@@ -18,6 +18,7 @@
 #include <bernese/window_effects.h>
 
 #include <QGuiApplication>
+#include <QPoint>
 
 #include "src/style/window_effects/window_effects.h"
 
@@ -48,6 +49,12 @@ bool WindowEffects::hasCompositing() const {  // NOLINT
 
 bool WindowEffects::setNoTitleBar(QWindow* window, bool no_title_bar) {  // NOLINT
   return bernese::window_effects::SetNoTitleBar(window, no_title_bar);
+}
+
+void WindowEffects::setPopupOffset(QWindow* window, int x, int y) {  // NOLINT
+  if (window != nullptr) {
+    window->setProperty("_q_waylandPopupOffset", QPoint(x, y));
+  }
 }
 
 }  // namespace gxde

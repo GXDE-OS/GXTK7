@@ -116,6 +116,8 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/DialogButtonBox.qml
   ${GXDE_STYLE_QML_DIR}/Frame.qml
   ${GXDE_STYLE_QML_DIR}/GXAboutDialog.qml
+  ${GXDE_STYLE_QML_DIR}/GXCrumbBar.qml
+  ${GXDE_STYLE_QML_DIR}/GXFileToolBar.qml
   ${GXDE_STYLE_QML_DIR}/GXFileView.qml
   ${GXDE_STYLE_QML_DIR}/GroupBox.qml
   ${GXDE_STYLE_QML_DIR}/GXMainWindow.qml
@@ -151,6 +153,7 @@ set(GXDE_STYLE_QML_FILES
   ${GXDE_STYLE_QML_DIR}/impl/ModuleListDelegate.qml
   ${GXDE_STYLE_QML_DIR}/impl/ModuleTile.qml
   ${GXDE_STYLE_QML_DIR}/impl/TitleBarButton.qml
+  ${GXDE_STYLE_QML_DIR}/impl/ToolBarButton.qml
 )
 
 # RectangularShadow was added to QtQuick.Effects in Qt 6.9, but Menu.qml uses
@@ -178,6 +181,7 @@ set_source_files_properties(
   ${GXDE_STYLE_QML_DIR}/impl/ModuleListDelegate.qml
   ${GXDE_STYLE_QML_DIR}/impl/ModuleTile.qml
   ${GXDE_STYLE_QML_DIR}/impl/TitleBarButton.qml
+  ${GXDE_STYLE_QML_DIR}/impl/ToolBarButton.qml
   PROPERTIES QT_QML_INTERNAL_TYPE TRUE
 )
 

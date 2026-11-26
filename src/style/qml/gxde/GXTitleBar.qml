@@ -120,17 +120,21 @@ T.Control {
 
     // All of them are made now and shown by their *Visible property, so
     // turning one on later works too.
+    // The menu owns the items; without a parent the JS engine collects
+    // them, and the menu turns empty after a while.
     if (menu.count > 0)
-      menu.addItem(separatorComponent.createObject(null))
-    menu.addItem(backgroundItemComponent.createObject(null))
+      menu.addItem(separatorComponent.createObject(menu.contentItem))
+    menu.addItem(backgroundItemComponent.createObject(menu.contentItem))
     for (const kind of ["help", "about", "quit"])
-      menu.addItem(menuItemComponent.createObject(null, { kind: kind }))
+      menu.addItem(menuItemComponent.createObject(menu.contentItem, { kind: kind }))
   }
 
   function rebuildCustomArea() {
     for (const slot of priv.slots) {
       if (slot.target)
         slot.target.parent = null
+      // Its bindings would go on moving the item until it is destroyed.
+      slot.target = null
       slot.destroy()
     }
     priv.slots = []
@@ -272,8 +276,11 @@ T.Control {
 
       Component.onCompleted: target.parent = slot
 
+      // An old slot lets go of its item for a new one; it must not put back
+      // what it changed, which would undo the new slot's bindings.
       Binding {
         target: slot.target
+        restoreMode: Binding.RestoreNone
         when: slot.target !== null
         property: "x"
         value: slot.horizontal & Qt.AlignRight ? slot.width - slot.targetWidth
@@ -282,6 +289,7 @@ T.Control {
       }
       Binding {
         target: slot.target
+        restoreMode: Binding.RestoreNone
         when: slot.target !== null
         property: "y"
         value: slot.vertical & Qt.AlignBottom ? slot.height - slot.targetHeight
@@ -290,12 +298,14 @@ T.Control {
       }
       Binding {
         target: slot.target
+        restoreMode: Binding.RestoreNone
         when: slot.target !== null && !slot.horizontal
         property: "width"
         value: slot.width
       }
       Binding {
         target: slot.target
+        restoreMode: Binding.RestoreNone
         when: slot.target !== null && !slot.vertical
         property: "height"
         value: slot.height

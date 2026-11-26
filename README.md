@@ -254,6 +254,8 @@ From the file manager ([gxde-file-manager](https://gitee.com/GXDE-OS/gxde-file-m
 - [X] `GXSideBar`, its left side bar
 - [X] `GXFileView`, its file list with the icon, list and extend modes
 - [X] `GXFileSystemModel`, the folder listing behind `GXFileView`
+- [X] `GXFileToolBar`, its tool bar.
+- [X] `GXCrumbBar`, its crumb bar.
 
 
 
