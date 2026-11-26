@@ -31,6 +31,10 @@ FocusScope {
   // Locations under it start with a Home crumb, like DFM.
   property string homePath: localPath(StandardPaths.writableLocation(StandardPaths.HomeLocation))
   property font font: Qt.application.font
+  
+  // Whether to enable dragging. e.g. If the toolbar is in title bar then whether should the toolbar
+  // pass the drag event back to the title bar behins it.
+  property bool enableSystemMove: false
 
   readonly property bool addressBarVisible: priv.editing
   readonly property bool searchMode: priv.searchMode
@@ -271,12 +275,32 @@ FocusScope {
 
       onWidthChanged: Qt.callLater(priv.scrollToEnd)
 
-      // A click on the empty part opens the address bar.
+      // A click on the empty part opens the address bar, and a drag may move
+      // the window.
       MouseArea {
+        property point pressPos
+        property bool moving: false
+
         width: crumbView.contentWidth
         height: crumbView.height
         acceptedButtons: Qt.LeftButton
-        onClicked: control.showAddressBar(false)
+        onPressed: mouse => {
+          pressPos = Qt.point(mouse.x, mouse.y)
+          moving = false
+        }
+        onPositionChanged: mouse => {
+          const distance = Application.styleHints.startDragDistance
+          if (!control.enableSystemMove || moving || !control.Window.window
+              || Math.abs(mouse.x - pressPos.x) < distance
+                 && Math.abs(mouse.y - pressPos.y) < distance)
+            return
+          moving = true
+          control.Window.window.startSystemMove()
+        }
+        onClicked: {
+          if (!moving)
+            control.showAddressBar(false)
+        }
         onWheel: wheel => {
           const delta = wheel.angleDelta.y !== 0 ? wheel.angleDelta.y : wheel.angleDelta.x
           priv.scrollBy(-delta / 2)

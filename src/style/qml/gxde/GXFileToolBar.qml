@@ -25,6 +25,7 @@ import QtQuick.Controls.Gxde
 //   GXMainWindow {
 //     titlebar.customAlignment: Qt.AlignVCenter
 //     titlebar.customItem: GXFileToolBar {
+//       enableSystemMove: true
 //       folder: view.folder
 //       onFolderRequested: url => view.folder = url
 //     }
@@ -51,6 +52,10 @@ FocusScope {
   property bool newTabButtonVisible: false
   // Alt+Left, Alt+Right, Alt+Up, Ctrl+L, Ctrl+F, Ctrl+1 and Ctrl+2.
   property bool shortcutsEnabled: true
+
+  // Whether to enable dragging. e.g. If the toolbar is in title bar then whether should the toolbar
+  // pass the drag event back to the title bar behins it.
+  property bool enableSystemMove: false
   property font font: Qt.application.font
 
   readonly property bool canGoBack: priv.index > 0
@@ -125,6 +130,35 @@ FocusScope {
       list.push(url)
       history = list
       index = list.length - 1
+    }
+  }
+
+  // Behind the buttons, the bar acts as a title bar.
+  MouseArea {
+    property bool moveOnDrag: false
+
+    anchors.fill: parent
+    enabled: control.enableSystemMove
+    acceptedButtons: Qt.LeftButton
+
+    onPressed: moveOnDrag = true
+    onReleased: moveOnDrag = false
+    onPositionChanged: {
+      if (moveOnDrag && control.Window.window) {
+        moveOnDrag = false
+        control.Window.window.startSystemMove()
+      }
+    }
+    onDoubleClicked: {
+      moveOnDrag = false
+      const window = control.Window.window
+      if (!window)
+        return
+      if (window.visibility === Window.Maximized)
+        window.showNormal()
+      else if (window.visibility !== Window.FullScreen
+               && (window.flags & Qt.WindowMaximizeButtonHint))
+        window.showMaximized()
     }
   }
 
@@ -208,6 +242,7 @@ FocusScope {
       Layout.minimumWidth: 1
       folder: control.folder
       font: control.font
+      enableSystemMove: control.enableSystemMove
       onFolderRequested: url => control.folderRequested(url)
       onSearchRequested: text => control.searchRequested(text)
     }
